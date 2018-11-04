@@ -1,5 +1,7 @@
 # Title
 
+Analysis of Quality of Space in Switzerland and how it can guide us towards Improvement of Societal Wellbeing
+
 # Abstract
 A 150 word description of the project idea, goals, dataset used. What story you would like to tell and why? What's the motivation behind your project?
 
@@ -12,8 +14,8 @@ The information gathered through this model could then be used either by city po
 A list of research questions you would like to address during the project. 
 
 - How to model quality of space on a postal code level in Switzerland?
-- How well does quality of life in Swiss cities correlate with insurance data?
-- From the insurance data, which of the factors best predict quality of space?
+- Correlation of quality of life (as defined by green ares, density, number of cafes/restaurants etc.) with insurance data?
+- Identifying  factors best predict quality of space?
 - More specifically, how does modelling (distribution) change across Switzerland’s large cities?
 - Can we observe socio-economic patterns or urban trends?
 
