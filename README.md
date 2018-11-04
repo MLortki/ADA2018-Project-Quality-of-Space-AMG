@@ -1,6 +1,5 @@
-# Title
+# Analysis of Quality of Space in Switzerland and how it can guide us towards Improvement of Societal Wellbeing
 
-Analysis of Quality of Space in Switzerland and how it can guide us towards Improvement of Societal Wellbeing
 
 # Abstract
 A 150 word description of the project idea, goals, dataset used. What story you would like to tell and why? What's the motivation behind your project?
