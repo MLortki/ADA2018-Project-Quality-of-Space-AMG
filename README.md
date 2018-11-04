@@ -17,7 +17,7 @@ A list of research questions you would like to address during the project.
 - Identification of predictors of quality of space
 - Distribution of quality of life and modelling to identify differences between Switzerland’s largest cities
 - Observation of socio-economic patterns or urban trends in case of their existence (in our dataset)
-- Comparison between existing aggregated and our course-grained analysis
+- Comparison of existing aggregated and our course-grained analysis results. Did we discover relevant patterns/behaviour that were lost in aggregation or are results consistent with previous research?
 
 
 # Dataset
