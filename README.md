@@ -17,13 +17,12 @@ A list of research questions you would like to address during the project.
 - Correlation of quality of life (as defined by green ares, density, number of cafes/restaurants etc.) with insurance data
 - Identification of predictors of quality of space
 - Distribution of quality of life and modelling to identify differences between Switzerland’s largest cities
-- Observation of socio-economic patterns or urban trends in case of their existence (in our Dataset)
+- Observation of socio-economic patterns or urban trends in case of their existence (in our dataset)
 
 
 # Dataset
 List the dataset(s) you want to use, and some ideas on how do you expect to get, manage, process and enrich it/them. Show us you've read the docs and some examples, and you've a clear idea on what to expect. Discuss data size and format if relevant.
 
-List the dataset(s) you want to use, and some ideas on how do you expect to get, manage, process and enrich it/them. Show us you've read the docs and some examples, and you've a clear idea on what to expect. Discuss data size and format if relevant.
 The following datasets will be used:
 
 - Swiss Mobiliar dataset
