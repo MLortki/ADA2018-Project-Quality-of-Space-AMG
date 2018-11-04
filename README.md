@@ -48,7 +48,7 @@ Add here a sketch of your planning for the next project milestone.
 - Dealing with any data inconsistencies, based on descriptive statistics.
 
 
-# Questions for TAa
+# Questions for TAs
 Add here some questions you have for us, in general or project-specific.
 
 - Do you know of any dataset that could complement our quality of space metrics at the zip code level, i.e. unemployment rate, crime rate?
