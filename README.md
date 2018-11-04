@@ -13,11 +13,11 @@ The information gathered through this model could then be used either by city po
 # Research questions
 A list of research questions you would like to address during the project. 
 
-- How to model quality of space on a postal code level in Switzerland?
-- Correlation of quality of life (as defined by green ares, density, number of cafes/restaurants etc.) with insurance data?
-- Identifying  factors best predict quality of space?
-- More specifically, how does modelling (distribution) change across Switzerland’s large cities?
-- Can we observe socio-economic patterns or urban trends?
+- How to model quality of space on a postal code level in Switzerland
+- Correlation of quality of life (as defined by green ares, density, number of cafes/restaurants etc.) with insurance data
+- Identification of predictors of quality of space
+- Distribution of quality of life and modelling to identify differences between Switzerland’s largest cities
+- Observation of socio-economic patterns or urban trends in case of their existence (in our Dataset)
 
 
 # Dataset
