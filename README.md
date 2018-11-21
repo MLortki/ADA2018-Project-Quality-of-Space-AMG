@@ -1,4 +1,4 @@
-# Analysis of Quality of Space in Switzerland and how it can guide us towards Improvement of Societal Wellbeing
+# Zurich: a snpashot into Switzerland's economic heart, through the lens of Insurance data.
 
 
 # Abstract
@@ -12,12 +12,9 @@ The information gathered through this model could then be used either by city po
 # Research questions
 A list of research questions you would like to address during the project. 
 
-- How to model quality of space on a postal code level in Switzerland
-- Correlation of quality of life (as defined by green ares, density, number of cafes/restaurants etc.) with insurance data
-- Identification of predictors of quality of space
-- Distribution of quality of life and modelling to identify differences between Switzerland’s largest cities
-- Observation of socio-economic patterns or urban trends in case of their existence (in our dataset)
-- Comparison of existing aggregated and our course-grained analysis results. Did we discover relevant patterns/behaviour that were lost in aggregation or are results consistent with previous research?
+- Identification of the most relevant indicators of quality of life in Zurich: building density, crime rate, mobility, green space density.
+- Which are the indicators of quality of life that can be best predicted by the insurance data?
+- Observation of socio-economic patterns or urban trends in Zurich.
 
 
 # Dataset
@@ -27,7 +24,7 @@ The following datasets will be used:
 
 - Swiss Mobiliar dataset
 - OpenStreetMap data, obtained via API
-- Possibly opendata.swiss or similar, depending on zip code level availability
+- https://data.stadt-zuerich.ch/
 
 The Swiss Mobiliar dataset is a private collection of anonymized insurance data, which groups information about a client and their house and car. It contains the following schemas: anonymous ID, status of employment, civil status, gender, year of birth, if house is owned or rented, speaking language, nation of origin, zip code of residence, how many children, canton of car matriculation, brand of car, price of car, car cylinder capacity, number of car claims, monetary value of car claims, premium class status of car, zip code of house, insured sum of house, standard of furniture, number of rooms in house, building zip code, insured sum of building, year of construction, type of house, number of claims for house, money of claims, premium class status of house.
 
