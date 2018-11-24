@@ -49,4 +49,28 @@ Add here a sketch of your planning for the next project milestone.
 # Questions for TAs
 Add here some questions you have for us, in general or project-specific.
 
+
+List of Datasets used (Zurich, zip code level info given as well):
+
+1. Parks - 118 in total
+2. Street Lights (Beleuchtung) - 40010 in total
+3. Old people center (Alterszentrum) - 28 in total
+4. Retirment houses (Alterswohnung) - 36 in total
+5. Handicapped parking (Behindertenparkplatz) - 410 in total
+6. Fontaines (brunnen) - 1281 in total
+7. Youth clubs/centers/ meeting center (Jugendtreff) - 13 in total
+8. Kindergarten - 354 in total
+9. Kinderhaus / Eltern-Kind-Zentrum - 16 in total
+10. Churches (Kirche) - 82 in total
+11. Roman-Catholic Parish (Kirchgemeinde Roemisch Katholisch) - (won't be using anymore)
+12. Temporary art in the urban space (Kunst im Stadtraum) - 388 in total
+13. picknickplatz - 110 in total
+14. schulkreis - polygon, won't be using
+15. social center (sozial zentrum) - 5 in total
+16. Gym (Sporthalle) - 16 in total
+17. Stadium  - 1 in total (therefore won't be using)
+18. WC handicapped - 28 in total
+19. WC not handicapped - 77 in total
+
+
 - Do you know of any dataset that could complement our quality of space metrics at the zip code level?
