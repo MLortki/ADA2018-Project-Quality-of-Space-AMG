@@ -1,4 +1,4 @@
-# Zurich: a snpashot into Switzerland's economic heart, through the lens of Insurance data.
+# Zurich: a snapshot into Switzerland's economic heart, through the lens of Insurance data.
 
 
 # Abstract
