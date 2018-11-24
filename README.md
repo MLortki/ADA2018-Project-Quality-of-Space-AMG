@@ -71,6 +71,28 @@ List of Datasets used (Zurich, zip code level info given as well):
 17. Stadium  - 1 in total (therefore won't be using)
 18. WC handicapped - 28 in total
 19. WC not handicapped - 77 in total
+20. Building addresses 
+21. Beach volleyball fields 
+22. Bike parks
+23. Community centers
+24. Football fields
+25. Hospitality companies - restaurants, bars, cafes, hotels etc...
+26. Ice rinks
+27. Indoor pools
+28. Outdoor pools
+29. Nurseries
+30. Kindergardens
+31. Elementary schools
+32. Mobility rental locations
+33. Care centers
+34. Skate parks
+35. City police locations (commissariat, detective offices, guard posts..)
+36. Tennis courts
+37. Viewpoints
+
+Finally, we have the following dataset taken from opendata.swiss (https://opendata.swiss/en/dataset/bevoelkerung-pro-plz):
+38. Population per zip code - this will be reduced to only Zurich zip codes
+
 
 
 - Do you know of any dataset that could complement our quality of space metrics at the zip code level?
