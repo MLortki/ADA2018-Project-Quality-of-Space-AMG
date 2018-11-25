@@ -1,0 +1,4 @@
+{"name":"Stadion","type":"FeatureCollection"
+,"features":[
+{"type":"Feature","geometry":{"type":"Point","coordinates":[8.50259738828867,47.3829100338995]},"properties":{"adresse":"Badenerstrasse 500","name":"Stadion Letzigrund","ort":"Zürich","plz":"8048","tel":"+41 44 413 94 94","www":"http://www.stadionletzigrund.ch"}}
+]}

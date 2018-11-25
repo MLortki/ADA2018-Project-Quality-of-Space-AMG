@@ -1,0 +1,6 @@
+{"name":"Eisbahn","type":"FeatureCollection"
+,"features":[
+{"type":"Feature","geometry":{"type":"Point","coordinates":[8.57681850590117,47.3756254030138]},"properties":{"adresse":"Adlisbergstrasse 36","name":"Kunsteisbahn Dolder","ort":"Zürich","plz":"8044","tel":"+41 44 267 70 80","www":"http://www.doldersports.com/de/20/kunsteisbahn.aspx"}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[8.50600904921682,47.3680996397896]},"properties":{"adresse":"Wasserschöpfi 71 (freig.)","name":"Sportzentrum Heuried","ort":"Zürich","plz":"8055","tel":"+41 44 413 95 30","www":"https://www.stadt-zuerich.ch/ssd/de/index/sport/eislaufen/heuried.html"}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[8.55467438849167,47.4120935377901]},"properties":{"adresse":"Siewerdtstrasse 80","name":"Kunsteisbahn Oerlikon","ort":"Zürich","plz":"8050","tel":"+41 44 413 91 00","www":"https://www.stadt-zuerich.ch/ssd/de/index/sport/eislaufen/oerlikon.html"}}
+]}
