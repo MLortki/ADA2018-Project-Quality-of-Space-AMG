@@ -14,8 +14,8 @@ A list of research questions you would like to address during the project.
 
 - Deciding for relevant metrics for quality of life apart from the obvious ones such as building density, crime rate, mobility, green space density.
 - Identifying indicators of quality of life that can be best predicted by the insurance data
-- Observation of socio-economic patterns or urban trends in Zurich
-- Answering questions, such as:
+- Observation of socio-economic patterns or urban trends in Zurich and answering questions (including but not limited to):
+Do young people live in areas with more bars/restaurants or do they prefer green places (with more parks for instance.) Are postal areas with higher average house and car premiums more protected than other areas. (In terms of police offices)? Can we observe a preferential treatment in terms of for instance number of street lights, pools or nurseries and kindergarten? Do churches attract older people or is it evenly distributed. Are they located in areas with less night life? Are people in areas with high number of viewpoints/fountains/parks wealthier (identified by their car and houses). Do wealthier postal codes have more nuseries and schools?
 
 
 # Dataset
