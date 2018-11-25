@@ -47,9 +47,7 @@ Add here a sketch of your planning for the next project milestone.
 - Dealing with any data inconsistencies, based on descriptive statistics.
 
 
-# List of datasets
-Add here some questions you have for us, in general or project-specific.
-
+# List of Zurich city datasets
 
 List of Datasets used (Zurich, zip code level info given as well), that will serve as Metrics for quality of space/life:
 
