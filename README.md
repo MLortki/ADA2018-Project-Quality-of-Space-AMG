@@ -1,4 +1,4 @@
-# Zurich: a snpashot into Switzerland's economic heart, through the lens of Insurance data.
+# Zurich: a snapshot into Switzerland's economic heart, through the lens of Insurance data.
 
 
 # Abstract
@@ -12,9 +12,10 @@ The information gathered through this model could then be used either by city po
 # Research questions
 A list of research questions you would like to address during the project. 
 
-- Identification of the most relevant indicators of quality of life in Zurich: building density, crime rate, mobility, green space density.
-- Which are the indicators of quality of life that can be best predicted by the insurance data?
-- Observation of socio-economic patterns or urban trends in Zurich.
+- Deciding for relevant metrics for quality of life apart from the obvious ones such as building density, crime rate, mobility, green space density.
+- Identifying indicators of quality of life that can be best predicted by the insurance data
+- Observation of socio-economic patterns or urban trends in Zurich
+- Answering questions, such as:
 
 
 # Dataset
@@ -23,15 +24,15 @@ List the dataset(s) you want to use, and some ideas on how do you expect to get,
 The following datasets will be used:
 
 - Swiss Mobiliar dataset
-- data.stadt-zuerich.ch
-- OpenStreetMap data, obtained via API if needed
+- data.stadt-zuerich.ch (list of dataset at the end of ReadMe)
+
 
 The Swiss Mobiliar dataset is a private collection of anonymized insurance data, which groups information about a client and their house and car. It contains the following schemas: anonymous ID, status of employment, civil status, gender, year of birth, if house is owned or rented, speaking language, nation of origin, zip code of residence, how many children, canton of car matriculation, brand of car, price of car, car cylinder capacity, number of car claims, monetary value of car claims, premium class status of car, zip code of house, insured sum of house, standard of furniture, number of rooms in house, building zip code, insured sum of building, year of construction, type of house, number of claims for house, money of claims, premium class status of house.
 
-There are around 1M entries in the Swiss Mobiliar dataset, however when narrowing to the zip codes of Zurich, the number of entries is reduced to around ????????????.
-To evaluate quality of space at the zip code level in Zurich, data is taken from the open source Zurich city dataset. The data is obtained via the website, and the following quantities per zip code area will be of particular interest for this project: number of buildings, number of parks, number of restaurants/cafes/bars, number of sport facilities etc.. Metrics of quality of space will be constructed from these quantities, based on the literature, but we expect to create metrics such as building density or fraction of green space.
+There are around 1M entries in the Swiss Mobiliar dataset, however when narrowing to the zip codes of Zurich, the number of entries is reduced to around 50 000.
 
-To increase modelling robustness, other datasets such as opendata.swiss could also be incorporated. This depends on whether it is possible to find other metrics of quality of life that are evaluated at the zip code level. For example, it would be interesting to use unemployment, crime rate, population density etc.. At this stage, unfortunately no dataset matching these requirements has been found.
+To evaluate quality of space at the zip code level in Zurich, data is taken from the open source Zurich city dataset. The data is obtained via the website, and the following quantities per zip code area will be of particular interest for this project: number of buildings, number of parks, number of restaurants/cafes/bars, number of sport facilities etc.. Metrics of quality of space will be constructed from these quantities, based on the literature, but we expect to add new metrics such as building density or fraction of green space.
+
 
 
 # A list of internal milestones up until project milestone 2
@@ -49,4 +50,45 @@ Add here a sketch of your planning for the next project milestone.
 # Questions for TAs
 Add here some questions you have for us, in general or project-specific.
 
-- Do you know of any dataset that could complement our quality of space metrics at the zip code level?
+
+List of Datasets used (Zurich, zip code level info given as well), that will server as Metrics for quality of space/life:
+
+1. Parks 
+2. Street Lights (Beleuchtung) 
+3. Old people center (Alterszentrum)
+4. Retirment houses (Alterswohnung) 
+5. Handicapped parking (Behindertenparkplatz) 
+6. Fontaines (brunnen)
+7. Youth clubs/centers/ meeting center (Jugendtreff)
+8. Kindergarten
+9. Kinderhaus / Eltern-Kind-Zentrum 
+10. Churches (Kirche) 
+11. Viewpoints
+12. Temporary art in the urban space (Kunst im Stadtraum) 
+13. picknickplatz 
+14. Tennis courts
+15. social center (sozial zentrum) 
+16. Gym (Sporthalle) 
+17. City police locations (commissariat, detective offices, guard posts..)
+18. WC handicapped 
+19. WC not handicapped 
+20. Building addresses 
+21. Beach volleyball fields 
+22. Bike parks
+23. Community centers
+24. Football fields
+25. Hospitality companies - restaurants, bars, cafes, hotels etc...
+26. Ice rinks
+27. Indoor pools
+28. Outdoor pools
+29. Nurseries
+30. Kindergardens
+31. Elementary schools
+32. Mobility rental locations
+33. Care centers
+34. Skate parks
+
+
+Finally, we have the following dataset taken from opendata.swiss (https://opendata.swiss/en/dataset/bevoelkerung-pro-plz):
+Population per zip code - this will be reduced to only Zurich zip codes
+
