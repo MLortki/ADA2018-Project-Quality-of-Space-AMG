@@ -49,7 +49,7 @@ Add here a sketch of your planning for the next project milestone.
 
 # List of Zurich city datasets
 
-List of Datasets used (Zurich, zip code level info given as well), that will serve as Metrics for quality of space/life:
+List of Datasets used (Zurich, zip code level info given as well), that will serve as Metrics for quality of space/life. Sometimes datasets will be combined to form metrics (e.g. sports facilities, young kids schooling etc..)
 
 1. Parks 
 2. Street Lights (Beleuchtung) 
