@@ -6,7 +6,8 @@ markdown: kramdown
 highlighter: pygments
 logo: false
 paginate: 15
-baseurl: /
+url: https://mlortki.github.io
+baseurl: /ADA2018-Project-Quality-of-Space-AMG
 domain_name: 'http://yourblog-domain.com'
 google_analytics: 'UA-XXXXXXXX-X'
 gems: [jekyll-paginate]
