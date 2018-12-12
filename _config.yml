@@ -16,4 +16,4 @@ gems: [jekyll-paginate]
 url:            'blog url'
 author:         'Your Name'
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-kasper
