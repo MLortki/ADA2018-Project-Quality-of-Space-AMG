@@ -1,4 +1,0 @@
-{"name":"Bikepark","type":"FeatureCollection"
-,"features":[
-{"type":"Feature","geometry":{"type":"Point","coordinates":[8.52393684932837,47.3557711264652]},"properties":{"adresse":"Kanalstrasse","name":"Bike-Park Allmend","ort":"Zürich","plz":"8045","tel":"+41 44 413 93 44","www":"https://www.stadt-zuerich.ch/ssd/de/index/sport/sportanlagen/freestyle-und-bikeanlagen/bike-park-allmend.html"}}
-]}
