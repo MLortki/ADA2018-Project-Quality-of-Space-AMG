@@ -590,3 +590,19 @@ Small Device Styles
     min-width: 240px;
     max-width: 320px;
     font-size: 11px; } }
+#header_wrap {
+  background-image: url("../images/zurich_pano.jpg");
+  background-size: 100%;
+  background-position: 0px 610px; }
+
+.inner {
+  position: relative;
+  max-width: 720px;
+  padding: 20px 10px;
+  margin: 0 auto; }
+
+#project_title {
+  text-align: center; }
+
+#project_tagline {
+  text-align: center; }
