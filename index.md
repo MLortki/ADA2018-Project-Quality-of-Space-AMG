@@ -9,10 +9,28 @@ layout: default
 
 ## Insurance data
 
-1.  Describe insurance data
-2.  Agreggation steps
-3.  Heatmap for visualization
-4.  Clustering
+The Swiss Mobiliar dataset is a private collection of anonymized insurance data, which groups information about a client and their house and car. It contains the following schemas: anonymous ID, status of employment, civil status, gender, year of birth, if house is owned or rented, speaking language, nation of origin, zip code of residence, how many children, canton of car matriculation, brand of car, price of car, car cylinder capacity, number of car claims, monetary value of car claims, premium class status of car, zip code of house, insured sum of house, standard of furniture, number of rooms in house, building zip code, insured sum of building, year of construction, type of house, number of claims for house, money of claims, premium class status of house. <br><br>
+
+There are around 1M entries in the Swiss Mobiliar dataset, however when narrowing to the zip codes of Zurich, the number of entries is reduced to around 50 000. <br><br>
+
+Among the information provided, found employment status, civil status, gender, year of birth, if house is rent or own, nationality (Swiss vs Non-swiss), number of children, information about carownershipm information about property ownership most relevant to our study and we further explored the data in those areas. <br><br><br>
+
+
+
+-  Categorical data exploration <br>
+For the categorical data we have about the insurers, we aggregated the information into the percentage of 
+
+{% include heatmap.html %}
+
+- Clustering <br>
+
+	- Choose optimal k for clustering <br>
+
+
+	- Clustering insurance data <br>
+
+
+	- Explore each cluster <br>
 
 ## Spatial correlation
 
