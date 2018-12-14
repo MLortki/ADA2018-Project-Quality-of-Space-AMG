@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Quality of Space in Zurich" />
 <script type="application/ld+json">
-{"name":"Quality of Space in Zurich","description":"A snapshot into Switzerland’s economic heart, through the lens of data.","@type":"WebSite","url":"http://localhost:4000/","headline":"Quality of Space in Zurich","@context":"http://schema.org"}</script>
+{"@type":"WebSite","headline":"Quality of Space in Zurich","url":"http://localhost:4000/","name":"Quality of Space in Zurich","description":"A snapshot into Switzerland’s economic heart, through the lens of data.","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -39,7 +39,78 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h2 id="zurich-city-data">Zurich city data</h2>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+<script src="https://unpkg.com/tippy.js@2.0.4/dist/tippy.all.min.js"></script>
+
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<script src="assets/js/d3-legend.min.js"></script>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+<link rel="icon" href="imgs/favicon.png" sizes="16x16" type="image/png" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<script src="assets/js/topojson.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="assets/css/global_map.css" />
+
+<h2 id="zurich-city-data">Zurich city data</h2>
+
+<section id="pinned-trigger2" class="centered-section">
+  <div id="pinned-element2">
+
+    <!--Slider-->
+    <div class="row" id="menubar">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8" id="map">
+        <div id="slidecontainer">
+          <div id="slider"></div>
+          <div id="dataset-title">
+            <h2 id="plotHeader">Population in Zurich</h2>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+
+    <!--Color Legend-->
+    <div id="color-legend"></div>
+
+    <!--Containers-->
+    <div id="content">
+      <div id="map-container-c">
+        <div id="map-container">
+
+        </div>
+      </div>
+      <div id="details"></div>
+    </div>
+
+
+    <!--Map Script-->
+    <script src="assets/js/global_map.js"></script>
+
+  </div>
+</section>
 
 <h2 id="insurance-data">Insurance data</h2>
 
@@ -126,9 +197,8 @@
 </dl>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-</code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The final element.
+The final element.
 </code></pre></div></div>
 
       </section>
