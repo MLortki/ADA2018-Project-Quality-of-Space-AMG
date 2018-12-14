@@ -1,6 +1,8 @@
 class MapPlot {
 
 
+//https://github.com/d3/d3-scale-chromatic
+
   constructor() {
 
     // metric slider
@@ -105,7 +107,7 @@ class MapPlot {
 
           var coloring = d3.scaleQuantile()
             .domain(DataArray)
-            .range(d3.schemeOrRd[8]);
+            .range(d3.schemeRdPu[8]);
 
           // get color for a country (sum over all years)
           function getColor(valueIn, coloring) {
@@ -192,9 +194,10 @@ class MapPlot {
 
             var coloring = d3.scaleQuantile()
               .domain(metricArray)
-              .range(d3.schemeOrRd[8]);
+              .range(d3.schemeRdPu[8]);
 
-            // color_legend("Color Map ", coloring);
+            d3.select("#color-legend").select("div").remove();
+            color_legend("Color Map ", coloring);
             console.log(map_column);
             console.log(data);
             d3.selectAll(".code").transition() //select all the countries and prepare for a transition to new values
@@ -213,7 +216,7 @@ class MapPlot {
 
           function color_legend(title, scale) {
             var legend = d3.legendColor()
-              .labelFormat(d3.format(",.0f"))
+              .labelFormat(d3.format(",.3f"))
               .cells(10)
               .scale(scale);
 
@@ -227,6 +230,7 @@ class MapPlot {
             svg_map.append("g")
               .attr("class", "legendQuant")
               .attr("transform", "translate(20,10)");
+
 
             svg_map.select(".legendQuant")
               .call(legend);
