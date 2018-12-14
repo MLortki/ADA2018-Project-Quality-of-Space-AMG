@@ -216,7 +216,7 @@ class MapPlot {
 
           function color_legend(title, scale) {
             var legend = d3.legendColor()
-              .labelFormat(d3.format(",.3f"))
+              .labelFormat(d3.format(",.2f"))
               .cells(10)
               .scale(scale);
 
