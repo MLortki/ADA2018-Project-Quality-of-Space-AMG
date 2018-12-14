@@ -180,7 +180,7 @@ class MapPlot {
           function sequenceMap(data, metric_column) {
 
             var csvToUse;
-            if (metric_column == "population") {
+            if (metric_column == 1) {
                csvToUse = csv;
             } else{
               csvToUse = zurich_ind;
@@ -198,8 +198,8 @@ class MapPlot {
 
             d3.select("#color-legend").select("div").remove();
             color_legend("Color Map ", coloring);
-            console.log(map_column);
-            console.log(data);
+            // console.log(map_column);
+            // console.log(data);
             d3.selectAll(".code").transition() //select all the countries and prepare for a transition to new values
               .duration(500) // give it a smooth time period for the transition
               .style('fill', function(d) {
