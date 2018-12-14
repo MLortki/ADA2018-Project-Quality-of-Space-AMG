@@ -17,7 +17,7 @@ body {
 }
 
 #dataset-title{
-  padding-top: 31px;
+  padding-top: 54px;
 }
 
 #actorDetails{
@@ -451,6 +451,10 @@ circle{
     border-radius: 4px;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
     background-color: #f2f2f2;
+}
+
+#map {
+  width: 114.666667%;
 }
 
 #map-container{
