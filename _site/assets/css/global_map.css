@@ -234,7 +234,7 @@ div.tooltip {
     height: 25px;
     top: -.7em;
     border-radius: 50%;
-    background: darkslategrey;
+    background: #e25b5ba8;
     cursor: pointer;
 }
 
@@ -242,7 +242,7 @@ div.tooltip {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: darkslategray;
+    background: #d8a0dc;
     cursor: pointer;
 }
 
