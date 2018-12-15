@@ -27,3 +27,24 @@ text-align: center;
 #forkme_banner {
   background: url('../images/blacktocat.png') #49505b no-repeat 95% 50%;
 }
+
+
+// Heatmap Styles
+#heatBtn {
+  margin-left: 40px;
+  margin-bottom: 60px;
+  background-color: #09031908;
+  // border-radius: 50%;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#heatBtn:hover {
+  background-color: #2b2728bf; /* Green */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.main-svg{
+  background: inherit;
+}

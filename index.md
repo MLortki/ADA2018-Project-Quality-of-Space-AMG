@@ -15,21 +15,76 @@ Zurich counts 400,028 inhabitants in total with around 32% of them not being Swi
 
 <br>
 
-Since Zurich is so diverse in terms of population (ages, backgrounds, nationalities, wealth etc.) and space, some of you may wonder how it is structured. What can we learn from this structure for knowledge transfer or what can we potentially improve for better life in Zurich? To answer these questions we need to identify characteristics and metrics of quality of life and space, study their spatial distribution and connection between metrics. We also need to portray people, their preferences, their life styles. We need to group them and study their groups. Only then, can we investigate metrics and people in one frame, connect groups of people with areas they occupy and search for reasons why. This data story is a bride between the quality of space and the people who live in the area. This data story, is the story of Zurich. Its people. Its spaces. Its life. 
+Since Zurich is so diverse in terms of population (ages, backgrounds, nationalities, wealth etc.) and space, some of you may wonder how it is structured. What can we learn from this structure for knowledge transfer or what can we potentially improve for better life in Zurich? To answer these questions we need to identify characteristics and indicators of quality of life and space, study their spatial distribution and connection between indicators. We also need to portray people, their preferences, their life styles. We need to group them and study their groups. Only then, can we investigate indicators and people in one frame, connect groups of people with areas they occupy and search for reasons why. This data story is a bridge between the quality of space and the people who live in the area. This data story, is the story of Zurich. Its people. Its spaces. Its life.
 
 
 
 ## Quality of Space/Life in Zurich
 
-adfsdfadfgdagfdgfsdgfsdgfd
-fsdgfdgfdsgfdsgfd
-hgfhgfhfg
-xcvxvcxvcxgfdg
-yhytjyj
-ljljhlgljgljh
+
+    How should we divide/structure area of Zurich to study its characteristics? How can we define quality of life and space for identified areas?  What are the metrics we should use?
 
 <br>
+
+Regarding the structure logical solution is to consider official postal areas within Zurich. There are 24 different zip codes in total.
+
+<br>
+
+To identify indicators we utilized the city of Zurich [open database](https://data.stadt-zuerich.ch/dataset), an online repository containing variety of information ranging from surveys to garbage collection schedules in Zurich.
+
+<br>
+
+We selected 35 relevant datasets from all the existing datasets that provided information either on zip code level or on geographic coordinate level that we linked with postal areas. We logically grouped some of the datasets (# of facilities per zip code):
+
+<br>
+
+- Sport facilities: sum of all of the public sport amenities (pools, soccer pitches, volleyball fields, sports halls, etc.)
+- Parks: sum of all the public parks and picnic areas
+- Child facilities: sum of all children related facilities (elementary schools, kindergartens, nursery schools, etc.)
+- Facilities for the elderly: sum of retirement homes, elderly centers, etc.
+- Handicapped accessibility: sum of all handicapped equipped toilets and parking spots for the disabled.
+- Community facilities: sum of community centers and youth centers.
+- Toilets: sum of public handicapped and non-handicapped equipped toilets
+- Transport rental: sum of all points of rental of Mobility cars and of PubliBikes.
+
+<br>
+
+The datasets that we did not group with other datasets include (# of facilities per zip code):
+
+<br>
+
+- Public drinking fountains
+- Street art
+- Street lights
+- Adresses/Buildings
+- Hospitality companies
+- Police locations
+
+<br>
+
+We also obtained the population per zip code, using la Poste’s [open database](https://swisspost.opendatasoft.com/explore/dataset/bevoelkerung_proplz/information/?disjunctive.plz&disjunctive.typ&disjunctive.ortbez18&sort=stichdatum).
+
+<br>
+
+Even though it is useful to know number of facilities per area, sometimes it’s more relevant to have information about accessibility. One way to do this is to find the shortest distance from individual habitations (addresses) to certain facilities. For instance, to measure police accessibility we computed the distance from each address to the closest police location and found the average shortest distance for each zip code. Using this method, average shortest distance to the following facilities were computed:
+
+<br>
+
+- police locations
+- parks
+- hospitality companies
+- handicapped facilities
+
+
+<br>
+
+Finally, we used all of the features mentioned above to create 5 indicators. It is difficult to estimate how to combine the above metrics into a meaningful composite score, unless one is an expert. To avoid this difficulty, we used a method based on PCA  and inspired by the one used to create [socio-economic status indices](https://academic.oup.com/heapol/article/21/6/459/612115). In this method, relevant subsets of
+
+<br>
+
 {% include scripts.html %}
+
+
 {% include global_map.html %}
 
 <br>
@@ -37,14 +92,49 @@ ljljhlgljgljh
 
 {% include radar_plot.html %}
 
-## Insurance data
+## Population in Zurich
 
-The Swiss Mobiliar dataset is a private collection of anonymized insurance data, which groups information about a client and their house and car. It contains the following schemas: anonymous ID, status of employment, civil status, gender, year of birth, if house is owned or rented, speaking language, nation of origin, zip code of residence, how many children, canton of car matriculation, brand of car, price of car, car cylinder capacity, number of car claims, monetary value of car claims, premium class status of car, zip code of house, insured sum of house, standard of furniture, number of rooms in house, building zip code, insured sum of building, year of construction, type of house, number of claims for house, money of claims, premium class status of house. <br><br>
 
-There are around 1M entries in the Swiss Mobiliar dataset, however when narrowing to the zip codes of Zurich, the number of entries is reduced to around 50 000. <br><br>
+Since it is hard to obtain big enough population sample of Zurich, we use the Swiss Mobiliar dataset for our data story to characterize people of Zurich. This approach, despite its bias,  was successfully used in approximation of population sample in previous researches, therefore we decided to adopt it.
 
-Among the information provided, found employment status, civil status, gender, year of birth, if house is rent or own, nationality (Swiss vs Non-swiss), number of children, information about carownershipm information about property ownership most relevant to our study and we further explored the data in those areas. <br><br><br>
+<br>
 
+The Swiss Mobiliar dataset is a private collection of anonymous insurance data, that groups information about clients, their demographics and properties. It contains the following relevant data:  (we need to choose which ones to keep from list)
+
+- anonymous ID
+- status of employment
+- civil status
+- gender
+- year of birth
+- if house is owned or rented
+- communication language
+- nation of origin
+- zip code of residence
+- how many children
+- canton of car matriculation
+- brand of car
+- price of car
+- car cylinder capacity
+- number of car claims
+- monetary value of car claims
+- premium class status of car
+- zip code of house
+- insured sum of house
+- standard of furniture
+- number of rooms in house
+- building zip code
+- insured sum of building
+- year of construction
+- type of house
+- number of claims for house
+- money of claims
+- premium class status of house
+
+<br><br>
+
+There are around **1M** entries in the Swiss Mobiliar dataset, however when narrowing down to the zip codes of Zurich, the number of entries is reduced to around 50 000.
+
+<br><br>
 
 
 -  Categorical data exploration <br>

@@ -142,7 +142,7 @@ class MapPlot {
                   //update HTML
                   var metric = "";
                   if (varying_title != "Population") {
-                    metric = " Metric";
+                    metric = " Indicator";
                   }
                   title.innerHTML = '<h2 id="plotHeader">' + varying_title + metric + constant_title + "</h2>";
 
