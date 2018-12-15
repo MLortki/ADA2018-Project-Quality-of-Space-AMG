@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Quality of Space in Zurich" />
 <script type="application/ld+json">
-{"@type":"WebSite","headline":"Quality of Space in Zurich","url":"http://localhost:4000/","name":"Quality of Space in Zurich","description":"A snapshot into Switzerland’s economic heart, through the lens of data.","@context":"http://schema.org"}</script>
+{"name":"Quality of Space in Zurich","description":"A snapshot into Switzerland’s economic heart, through the lens of data.","@type":"WebSite","url":"http://localhost:4000/","headline":"Quality of Space in Zurich","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -128,6 +128,129 @@ ljljhlgljgljh</p>
 
   </div>
 </section>
+
+<p><br /></p>
+<h2 id="zurich-indicators">Zurich indicators</h2>
+
+<head>
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+
+  <div id="myDiv"></div>
+  <br /><br />
+  <div id="checkboxes"></div>
+  <button id="confirm" onclick="plotSelected()">confirm</button>
+  <script>
+  theta = ['safety', 'hospitality',	'handicapp',	'parks', 'sports_facility']
+  values = {
+    "8050":	[0.030896828,	-0.004572564,	0.057085518,	-0.010871173,	0.026753241],
+    "8049":	[-0.022621446,	-0.098502831,	-0.08832494,	-0.014034132,	-0.084931888],
+    "8048":	[-0.023799861,	-0.033502914,	0.033033769,	-0.11034059,	0.132785656],
+    "8032":	[0.000954752,	-0.059359181,	-0.023113704,	-0.072792054,	-0.11030906],
+    "8046":	[-0.032634937,	-0.098413723,	-0.102853254,	-0.057836811,	-0.000254197],
+    "8008":	[0.08458796,	0.025441926,	0.101297907,	0.022522513,	-0.072590963],
+    "8006":	[0.095800373,	-0.020039238,	0.121365396,	-0.011079987,	-0.107960007],
+    "8057":	[-0.070623252,	-0.076153686,	-0.054429404,	-0.087870579,	-0.110883642],
+    "8051":	[-0.010481537,	-0.069506611,	-0.045905343,	-0.054729535,	0.084444589],
+    "8004":	[0.233420864,	0.17854827,	0.057512398,	-0.106251527,	-0.096343087],
+    "8038":	[-0.155391433,	-0.067503925,	-0.035683976,	-0.084511577,	-0.100144],
+    "8052":	[-0.165548881,	-0.066351767,	-0.119538515,	-0.045349256,	0.109944255],
+    "8001":	[0.705972424,	0.775829619,	0.306236156,	0.21264984,	-0.072464201],
+    "8047":	[-0.135001011,	-0.078502083,	-0.073231384,	-0.111341729,	-0.040213967],
+    "8055":	[-0.111467655,	-0.079084185,	-0.049621655,	-0.074964501,	0.003416509],
+    "8053":	[-0.215678321,	-0.130728229,	-0.111233041,	0.150515856,	-0.077551843],
+    "8044":	[-0.108740713,	-0.084181354,	0.240592591,	0.163299816,	0.050963134],
+    "8037":	[-0.064559582,	-0.045699319,	-0.008263214,	0.085373957,	-0.054214904],
+    "8045":	[0.055694278,	0.006982399,	-0.003803764,	0.039354108,	0.110701105],
+    "8005":	[0.121748683,	0.171034562,	0.197989867,	-0.101802088,	-0.104007329],
+    "8003":	[0.008375919,	0.049817279,	0.05500789,	-0.096026545,	-0.074555218],
+    "8002":	[0.207048396,	0.054111733,	0.108578337,	0.047805901,	-0.017407523],
+    "8041":	[-0.194964702,	-0.095166556,	-0.039490159,	0.352395521,	0.297264694],
+    "8064":	[-0.081403965,	-0.052037492,	-0.077892481,	-0.09482114,	0.453424345],
+  }
+
+
+// add checkbox
+  addCheckbox()
+  plotAll()
+
+  function addCheckbox(){
+    for (var zip in values) {
+      var x = document.createElement("INPUT")
+      x.setAttribute("type", "checkbox")
+      x.setAttribute("id", zip)
+
+      var label = document.createElement("LABEL")
+      label.setAttribute("for", zip)
+      label.appendChild(document.createTextNode(zip + "  "))
+
+      document.getElementById("checkboxes").appendChild(x);
+      document.getElementById("checkboxes").appendChild(label);
+    }
+  }
+  function plotSelected(){
+    Plotly.purge(myDiv)
+    console.log("hi")
+    data = []
+    for (var zip in values) {
+      var checked = document.getElementById(zip).checked
+      console.log(zip)
+      console.log(checked)
+      if (checked){
+        radar = {
+          type: 'scatterpolar',
+          r: values[zip],
+          theta: theta,
+          fill: 'toself',
+          name: zip
+        }
+        data.push(radar)
+      }
+    }
+
+
+    layout = {
+      polar: {
+        radialaxis: {
+          visible: true,
+          range: [-0.45,0.8]
+        }
+      }
+    }
+    if (data.length != 0){
+      Plotly.plot("myDiv", data, layout, {showSendToCloud: true})
+    }
+  }
+  function plotAll(){
+    data = []
+    for (var zip in values) {
+      radar = {
+        type: 'scatterpolar',
+        r: values[zip],
+        theta: theta,
+        fill: 'toself',
+        name: zip
+      }
+      data.push(radar)
+    }
+
+
+    layout = {
+      polar: {
+        radialaxis: {
+          visible: true,
+          range: [-0.45,0.8]
+        }
+      }
+    }
+
+    Plotly.plot("myDiv", data, layout, {showSendToCloud: true})
+  }
+  </script>
+</body>
 
 <h2 id="insurance-data">Insurance data</h2>
 

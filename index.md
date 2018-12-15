@@ -32,7 +32,10 @@ ljljhlgljgljh
 {% include scripts.html %}
 {% include global_map.html %}
 
+<br>
+## Zurich indicators
 
+{% include radar_plot.html %}
 
 ## Insurance data
 
