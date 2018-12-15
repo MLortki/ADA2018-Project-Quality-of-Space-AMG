@@ -240,6 +240,7 @@
   addCheckbox()
   plotAll()
 
+
   function addCheckbox(){
     for (var zip in values) {
       var x = document.createElement("INPUT")
@@ -276,13 +277,16 @@
 
 
     layout = {
+      paper_bgcolor: "rgba(0,0,0,0)",
       polar: {
         radialaxis: {
           visible: true,
-          range: [-0.45,0.8]
+          range: [-0.45,0.8],
+          paper_bgcolor: "rgba(0,0,0,0)"
         }
       }
     }
+
     if (data.length != 0){
       Plotly.plot("myDiv", data, layout, {showSendToCloud: true})
     }
@@ -302,10 +306,12 @@
 
 
     layout = {
+      paper_bgcolor: "rgba(0,0,0,0)",
       polar: {
         radialaxis: {
           visible: true,
-          range: [-0.45,0.8]
+          range: [-0.45,0.8],
+          paper_bgcolor: "rgba(0,0,0,0)"
         }
       }
     }
