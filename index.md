@@ -36,6 +36,7 @@ ljljhlgljgljh
 ## Zurich indicators
 
 {% include radar_plot.html %}
+{% include iris.html %}
 
 ## Insurance data
 
