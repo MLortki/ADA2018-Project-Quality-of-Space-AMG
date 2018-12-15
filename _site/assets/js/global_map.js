@@ -19,7 +19,7 @@ class MapPlot {
       .rotate([0, 0])
       .center([8.54, 47.37]) // WorldSpace: Latitude and longitude of center of switzerland
       .scale(170000)
-      .translate([width / 2.7, height / 2]) // SVG space
+      .translate([width / 2, height / 2]) // SVG space
       .precision(.1);
 
 

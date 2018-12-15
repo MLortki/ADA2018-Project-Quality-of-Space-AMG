@@ -1,11 +1,38 @@
 ---
 layout: default
 ---
+
+
+Zurich is the largest city in Switzerland settled for over 2000 years. Located at the tip of the lake Zurich, it mesmerizes visitors  and inhabitants with its magnificent landscapes of lake, mountains and rivers. It is a home of numerous  museum and art galleries including, but not limited to, Zurich Museum of Art, Swiss National Museum and Centre le Corbusier. On the either side of the Limmat One can find numerous historic sites such as  Lindenhof and Imperal Palace. Zurich is also cluttered with dozens of churches, parks and gardens.
+
+<br>
+
+Zurich stands out not only with its nature, art and aesthetic qualities, but it is also considered as the hub of Switzerland. Zurich serves as a connection point for railways, buses and airplanes. It is considered as one of the global markets and  as an important financial center despite its small size and population.
+
+<br>
+
+Zurich counts 400,028 inhabitants in total with around 32% of them not being Swiss citizens. Therefore, the city is very diverse and combines people with different cultures, nationalities and heritage. Since there are several popular universities such as ETH and PHW Business school, Zurich is also home for many talented young people as well as professionals with years of experience, families and retired individuals who want to enjoy every second remaining in their life.
+
+<br>
+
+Since Zurich is so diverse in terms of population (ages, backgrounds, nationalities, wealth etc.) and space, some of you may wonder how it is structured. What can we learn from this structure for knowledge transfer or what can we potentially improve for better life in Zurich? To answer these questions we need to identify characteristics and metrics of quality of life and space, study their spatial distribution and connection between metrics. We also need to portray people, their preferences, their life styles. We need to group them and study their groups. Only then, can we investigate metrics and people in one frame, connect groups of people with areas they occupy and search for reasons why. This data story is a bride between the quality of space and the people who live in the area. This data story, is the story of Zurich. Its people. Its spaces. Its life. 
+
+
+
+## Quality of Space/Life in Zurich
+
+adfsdfadfgdagfdgfsdgfsdgfd
+fsdgfdgfdsgfdsgfd
+hgfhgfhfg
+xcvxvcxvcxgfdg
+yhytjyj
+ljljhlgljgljh
+
+<br>
 {% include scripts.html %}
-
-## Zurich city data
-
 {% include global_map.html %}
+
+
 
 ## Insurance data
 
@@ -18,7 +45,7 @@ Among the information provided, found employment status, civil status, gender, y
 
 
 -  Categorical data exploration <br>
-For the categorical data we have about the insurers, we aggregated the information into the percentage of 
+For the categorical data we have about the insurers, we aggregated the information into the percentage of
 
 {% include heatmap.html %}
 
