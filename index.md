@@ -33,7 +33,7 @@ Regarding the structure logical solution is to consider official postal areas wi
 To identify indicators we utilized the city of Zurich [open database](https://data.stadt-zuerich.ch/dataset), an online repository containing variety of information ranging from surveys to garbage collection schedules in Zurich.
 
 
-![image-title-here](/assets/images/openDataPipeline.png){:class="img-responsive"}
+![image-title-here](/assets/images/openDataPipeline.png){:.center-image}
 
 <br>
 
@@ -105,7 +105,7 @@ Even though it is useful to know number of facilities per area, sometimes it’s
 
 <br>
 
-Finally, we used all of the features mentioned above to create 5 indicators. It is difficult to estimate how to combine the above metrics into a meaningful composite score, unless one is an expert. To avoid this difficulty, we used a method based on PCA  and inspired by the one used to create [socio-economic status indices](https://academic.oup.com/heapol/article/21/6/459/612115). In this method, relevant subsets of
+Finally, we used all of the features mentioned above to create 5 indicators. It is difficult to estimate how to combine the above metrics into a meaningful composite score, unless one is an expert. To avoid this difficulty, we used a method based on PCA  and inspired by the one used to create [socio-economic status indices](https://academic.oup.com/heapol/article/21/6/459/612115). In this method, relevant subsets of features are chosen. The data is then normalized for each feature and PCA is applied to it. The first component of the analysis is chosen to create the indicator, which is therefore basically a weighted sum of the normalized features. 
 
 <br>
 
