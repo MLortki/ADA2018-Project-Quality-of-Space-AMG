@@ -66,6 +66,8 @@
 
 <p>To identify indicators we utilized the city of Zurich <a href="https://data.stadt-zuerich.ch/dataset">open database</a>, an online repository containing variety of information ranging from surveys to garbage collection schedules in Zurich.</p>
 
+<p><img src="/assets/images/openDataPipeline.png" alt="image-title-here" class="img-responsive" /></p>
+
 <p><br /></p>
 
 <p>We selected 35 relevant datasets from all the existing datasets that provided information either on zip code level or on geographic coordinate level that we linked with postal areas. We logically grouped some of the datasets (# of facilities per zip code):</p>
@@ -83,20 +85,28 @@
   <li>Transport rental: sum of all points of rental of Mobility cars and of PubliBikes.</li>
 </ul>
 
-<p><br /></p>
+<!-- <br>
 
-<p>The datasets that we did not group with other datasets include (# of facilities per zip code):</p>
+The datasets that we did not group with other datasets include (# of facilities per zip code):
 
-<p><br /></p>
+<br>
 
-<ul>
-  <li>Public drinking fountains</li>
-  <li>Street art</li>
-  <li>Street lights</li>
-  <li>Adresses/Buildings</li>
-  <li>Hospitality companies</li>
-  <li>Police locations</li>
-</ul>
+- Public drinking fountains
+- Street art
+- Street lights
+- Adresses/Buildings
+- Hospitality companies
+- Police locations -->
+
+<!-- - Population
+- addresses
+- sports Facilities
+- fountains
+- Street lights
+- Police locations
+- parks
+- hospitality companies
+- Handicapped -->
 
 <p><br /></p>
 
@@ -104,22 +114,10 @@
 
 <p><br /></p>
 
-<p>Even though it is useful to know number of facilities per area, sometimes it’s more relevant to have information about accessibility. One way to do this is to find the shortest distance from individual habitations (addresses) to certain facilities. For instance, to measure police accessibility we computed the distance from each address to the closest police location and found the average shortest distance for each zip code. Using this method, average shortest distance to the following facilities were computed:</p>
+<p>Information regarding the most relevant (groups of) datasets is provided below:</p>
 
-<p><br /></p>
-
-<ul>
-  <li>police locations</li>
-  <li>parks</li>
-  <li>hospitality companies</li>
-  <li>handicapped facilities</li>
-</ul>
-
-<p><br /></p>
-
-<p>Finally, we used all of the features mentioned above to create 5 indicators. It is difficult to estimate how to combine the above metrics into a meaningful composite score, unless one is an expert. To avoid this difficulty, we used a method based on PCA  and inspired by the one used to create <a href="https://academic.oup.com/heapol/article/21/6/459/612115">socio-economic status indices</a>. In this method, relevant subsets of</p>
-
-<p><br /></p>
+<p><br />
+<br /></p>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 
@@ -191,6 +189,25 @@
 
   </div>
 </section>
+
+<p><br /></p>
+
+<p>Even though it is useful to know number of facilities per area, sometimes it’s more relevant to have information about accessibility. One way to do this is to find the shortest distance from individual habitations (addresses) to certain facilities. For instance, to measure police accessibility we computed the distance from each address to the closest police location and found the average shortest distance for each zip code. Using this method, average shortest distance to the following facilities were computed:</p>
+
+<p><br /></p>
+
+<ul>
+  <li>police locations</li>
+  <li>parks</li>
+  <li>hospitality companies</li>
+  <li>handicapped facilities</li>
+</ul>
+
+<p><br /></p>
+
+<p>Finally, we used all of the features mentioned above to create 5 indicators. It is difficult to estimate how to combine the above metrics into a meaningful composite score, unless one is an expert. To avoid this difficulty, we used a method based on PCA  and inspired by the one used to create <a href="https://academic.oup.com/heapol/article/21/6/459/612115">socio-economic status indices</a>. In this method, relevant subsets of</p>
+
+<p><br /></p>
 
 <p><br /></p>
 <h2 id="zurich-indicators">Zurich indicators</h2>
@@ -552,6 +569,8 @@ The final element.
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
+        <p>Gregory Duthe, Manana Lortkipanidze, Boying Liu</p>
+        <p>Applied Data Analysis, EPFL, 2018</p> 
         
         <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
