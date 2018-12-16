@@ -7,6 +7,11 @@ Data Story:
 https://mlortki.github.io/ADA2018-Project-Quality-of-Space-AMG/
 
 
+Final jupyter notebook:
+
+data_analysis.ipynb
+
+
 # Abstract
 A 150 word description of the project idea, goals, dataset used. What story you would like to tell and why? What's the motivation behind your project?
 
