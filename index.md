@@ -105,7 +105,7 @@ Even though it is useful to know number of facilities per area, sometimes it’s
 
 <br>
 
-Finally, we used all of the features mentioned above to create 5 indicators. It is difficult to estimate how to combine the above metrics into a meaningful composite score, unless one is an expert. To avoid this difficulty, we used a method based on PCA  and inspired by the one used to create [socio-economic status indices](https://academic.oup.com/heapol/article/21/6/459/612115). In this method, relevant subsets of features are chosen. The data is then normalized for each feature and PCA is applied to it. The first component of the analysis is chosen to create the indicator, which is therefore basically a weighted sum of the normalized features. 
+Finally, we used all of the features mentioned above to create 5 indicators. It is difficult to estimate how to combine the above metrics into a meaningful composite score, unless one is an expert. To avoid this difficulty, we used a method based on PCA  and inspired by the one used to create [socio-economic status indices](https://academic.oup.com/heapol/article/21/6/459/612115). In this method, relevant subsets of features are chosen. The data is then normalized for each feature and PCA is applied to it. The first component of the analysis is chosen to create the indicator, which is therefore basically a weighted sum of the normalized features.
 
 <br>
 
@@ -119,9 +119,13 @@ Finally, we used all of the features mentioned above to create 5 indicators. It 
 
 ## Population in Zurich
 
-{% include age_ridgeplot.html %}
+<!-- {% include age_ridgeplot.html %} -->
+
 
 <br><br>
+
+    Portray people, their preferences, their life styles in Zurich. Group them and study  their groups.
+
 Since it is hard to obtain big enough population sample of Zurich, we use the Swiss Mobiliar dataset for our data story to characterize people of Zurich. This approach, despite its bias,  was successfully used in approximation of population sample in previous researches, therefore we decided to adopt it.
 
 <br>
