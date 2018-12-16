@@ -636,3 +636,7 @@ Small Device Styles
 .center-image {
   margin: 0 auto;
   display: block; }
+
+.map-image {
+  width: auto;
+  height: 400px; }

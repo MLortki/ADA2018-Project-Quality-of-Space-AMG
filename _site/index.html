@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Quality of Space in Zurich" />
 <script type="application/ld+json">
-{"@type":"WebSite","headline":"Quality of Space in Zurich","url":"http://localhost:4000/","name":"Quality of Space in Zurich","description":"A snapshot into Switzerland’s economic heart, through the lens of data.","@context":"http://schema.org"}</script>
+{"name":"Quality of Space in Zurich","description":"A snapshot into Switzerland’s economic heart, through the lens of data.","@type":"WebSite","url":"http://localhost:4000/","headline":"Quality of Space in Zurich","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -560,7 +560,50 @@ document.addEventListener("DOMContentLoaded", function(event) {
   </li>
 </ul>
 
-<h2 id="spatial-correlation">Spatial correlation</h2>
+<h2 id="linking-the-people-to-the-city">Linking the people to the city</h2>
+
+<p>Now that we have constructed metrics that characterize the city and obtained information about its citizens, we want to link the people to the area that they live in, and understand what are the factors that lead to them living there. We have gathered a lot of features and metrics so far, and there is a lot of information to be extracted. We chose to focalize our spatial analysis to a few points that really stand out. To reveal these elements, we first examine which features correlate to each other. The following heatmap shows the Pearson correlation coefficient between all of the indicators and some mean insurance data features (aggregated to zip code level). The 8001 postal area is an outlier. Being the historical center, it is very well equipped and dense in terms of buildings, hospitality companies etc. It will be removed in this analysis.<br />
+<br />
+<img src="/assets/images/corr_heatmap.png" alt="image-title-here" class="center-image" />
+<br /></p>
+
+<p>Some remarks concerning this heatmap:</p>
+<ul>
+  <li>All of the mean insurance customer metrics seem to be positively correlated together. This should be expected, as older customers should earn more, have more cars and larger houses on average.<br /></li>
+  <li>Some of the city indicators are positively correlated together. For instance the safety indicator seems to be quite strongly positvely correlated to the hospitality one.<br /></li>
+  <li>We see some counterintuitive behavior: the average number of rooms is strongly negatively correlated to the safety indicator. Upon further analysis, and when considering how the safety indicator was constructed, it seems that this safety score is actually measuring proximity to the center. The majority of the police locations are situated in the center of Zurich, and the number of street lights follows a similar pattern. This does not however mean that the suburban postal areas are less safe.<br /></li>
+</ul>
+
+<p>We then focus on a few highly correlated elements, while being aware of the above remarks.<br />
+<br /></p>
+
+<p><strong>Young people tend to be in areas with more hospitality companies (bars, cafés, etc.).</strong><br />
+<br />
+This correlation was found with r= -0.804502 and p-value= 4e-7.
+<br />
+<br />
+<img src="/assets/images/age_hospitality.png" alt="image-title-here" class="map-image" />
+<br />
+<br /></p>
+
+<p><strong>People with more children tend to live further aways from hospitality companies and closer to parks.</strong><br />
+(r=-0.746151 0.566424, p-value=4e-5 5e-3)</p>
+
+<p>2 maps side by side.</p>
+
+<p><strong>People with more cars seem to live in areas with less restaurants and more sports facilities</strong><br />
+(r=-0.660992 0.552678, p-value= 5e-4 6e-3)
+2 maps side by side.</p>
+
+<p>In general it seems that the wealthier you are, which in general means that you are older and have more cars and a bigger house, the more you live on the outskirts of Zurich, in areas with less cafés, restaurants etc. To mathematically back up this claim we choose to look at the spatial autocorrelation of wealthy people, i.e. we ask the following the question: is there a pattern to the spatial distribution of the wealthy? We can answer performing a spatial analysis using <strong>Moran’s I</strong>.<br />
+<br />
+Moran’s I is a measure of how spatially autocorrelated a variable is, and can be easily <a href="http://darribas.org/gds15/content/labs/lab_06.html">implemented</a> using the PySAL package. For the average property premium of insurance customers in Zurich, we find a Moran’s I of <strong>0.46</strong>, with a p-value of <strong>0.001</strong>. This indicates that there is indeed a pattern to distribution of the wealthy. What then is that pattern? Using PySAL’s Local Indicators of Spatial Association (LISAs), we can determine spatial clusters. This is shown in the map below.<br /></p>
+
+<p><br />
+<img src="/assets/images/spatial_clusters.png" alt="image-title-here" class="center-image" />
+<br /></p>
+
+<p>Surprinsingly, instead of seeing a difference between inner and outer Zurich postal areas, we instead observe a contrast between the eastern and the western postal areas.<br /></p>
 
 <h2 id="clusters">Clusters</h2>
 

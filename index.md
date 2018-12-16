@@ -179,7 +179,49 @@ For the categorical data (eg. job state, civil state, nationality) we have about
 
 	- Explore each cluster <br>
 
-## Spatial correlation
+## Linking the people to the city
+
+Now that we have constructed metrics that characterize the city and obtained information about its citizens, we want to link the people to the area that they live in, and understand what are the factors that lead to them living there. We have gathered a lot of features and metrics so far, and there is a lot of information to be extracted. We chose to focalize our spatial analysis to a few points that really stand out. To reveal these elements, we first examine which features correlate to each other. The following heatmap shows the Pearson correlation coefficient between all of the indicators and some mean insurance data features (aggregated to zip code level). The 8001 postal area is an outlier. Being the historical center, it is very well equipped and dense in terms of buildings, hospitality companies etc. It will be removed in this analysis.<br>
+<br>
+![image-title-here](/assets/images/corr_heatmap.png){:.center-image}
+<br>
+
+Some remarks concerning this heatmap:
+- All of the mean insurance customer metrics seem to be positively correlated together. This should be expected, as older customers should earn more, have more cars and larger houses on average.<br>
+- Some of the city indicators are positively correlated together. For instance the safety indicator seems to be quite strongly positvely correlated to the hospitality one.<br>
+- We see some counterintuitive behavior: the average number of rooms is strongly negatively correlated to the safety indicator. Upon further analysis, and when considering how the safety indicator was constructed, it seems that this safety score is actually measuring proximity to the center. The majority of the police locations are situated in the center of Zurich, and the number of street lights follows a similar pattern. This does not however mean that the suburban postal areas are less safe.<br>
+
+
+We then focus on a few highly correlated elements, while being aware of the above remarks.<br>
+<br>
+
+**Young people tend to be in areas with more hospitality companies (bars, cafés, etc.).**<br>
+<br>
+This correlation was found with r= -0.804502 and p-value= 4e-7.
+<br>
+<br>
+![image-title-here](/assets/images/age_hospitality.png){:.map-image}
+<br>
+<br>
+
+**People with more children tend to live further aways from hospitality companies and closer to parks.**<br>
+(r=-0.746151 0.566424, p-value=4e-5 5e-3)
+
+2 maps side by side.
+
+**People with more cars seem to live in areas with less restaurants and more sports facilities**<br>
+(r=-0.660992 0.552678, p-value= 5e-4 6e-3)
+2 maps side by side.
+
+In general it seems that the wealthier you are, which in general means that you are older and have more cars and a bigger house, the more you live on the outskirts of Zurich, in areas with less cafés, restaurants etc. To mathematically back up this claim we choose to look at the spatial autocorrelation of wealthy people, i.e. we ask the following the question: is there a pattern to the spatial distribution of the wealthy? We can answer performing a spatial analysis using **Moran's I**.<br>
+<br>
+Moran's I is a measure of how spatially autocorrelated a variable is, and can be easily [implemented](http://darribas.org/gds15/content/labs/lab_06.html) using the PySAL package. For the average property premium of insurance customers in Zurich, we find a Moran's I of **0.46**, with a p-value of **0.001**. This indicates that there is indeed a pattern to distribution of the wealthy. What then is that pattern? Using PySAL's Local Indicators of Spatial Association (LISAs), we can determine spatial clusters. This is shown in the map below.<br>
+
+<br>
+![image-title-here](/assets/images/spatial_clusters.png){:.center-image}
+<br>
+
+Surprinsingly, instead of seeing a difference between inner and outer Zurich postal areas, we instead observe a contrast between the eastern and the western postal areas.<br>
 
 ## Clusters
 
