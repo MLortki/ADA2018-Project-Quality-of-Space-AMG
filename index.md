@@ -24,7 +24,7 @@ Since Zurich is so diverse in terms of population (ages, backgrounds, nationalit
 ## Quality of Space/Life in Zurich
 
 
-    How should we divide/structure area of Zurich to study its characteristics? How can we define quality of life and space for identified areas?  What are the metrics we should use?
+    How should we divide/structure area of Zurich to study its characteristics? How can we define quality of life and space for identified areas?  What are the indicators we should use?
 
 <br>
 
@@ -119,6 +119,32 @@ Finally, we used all of the features mentioned above to create 5 indicators. It 
 {% include radar_plot.html %}
 
 <br>
+
+
+### Safety Score
+We estimated safety indicator/score using street light counts in combination with number and shortest average distance of police locations using PCA. The best result was obtained weighting street lights and number of police locations by 0.87 and 0.1 respectively (positive influence), whereas distance was weighted by -0.49 (negative influence). The further the shortest average location is, the less the score will be. Obtained results make perfect logical sense.
+
+<br>
+
+The visualization above displays score for each zip code. One can select any subset of postal areas for further exploration. We observe, that 8001 zip code has significantly better score (0.71)  than any other area. Since it is the old town part of Zurich, it seems logical that safety is emphasized. However, this score can be seen as an outlier considering that the maximal score for other postal areas is 0.3.
+
+
+### Hospitality Score
+
+In order to computer hospitality indicator, we used number and shortest average distance to hospitality facilities of our data. As expected, the final score is negatively influenced by distance (-0.29) and positively (0.96) by number of facilities. Again, 8001 postal area represents an outlier, that can be explained by its touristic value or biased sampling, since hospitality facilities in that area might be better known.
+
+### Accessibility score
+
+Regarding accessibility score, we utilized aggregated handicap dataset together with shortest average distance to it. In this case, score gets penalized harder than in previous cases, when distance is long (-0.76). This is a desired property, since number of facilities make no difference, if it’s cumbersome to reach one.
+
+### Parks
+
+To estimate parks/green are score, we used aggregated parks dataset with shortest average distances. In this case, distance has relatively small influence (-0.07), whereas number of parks is weighted by 0.1.
+
+### Sports Facilities
+
+In order to obtain the score, we normalize sport facilities dataset we have.
+
 <br>
 <br>
 
@@ -165,7 +191,7 @@ For each of the areas, German is the dominating language and Swiss is the domina
 
 ## Linking the people to the city
 
-    investigate indicators and people in one frame, connect groups of people with areas   they occupy and search for reasons why.
+    Investigate indicators and people in one frame, connect groups of people with areas they occupy and search for reasons why.
 
 <br>
 
@@ -214,7 +240,7 @@ Average number of children correlates with hospitality and parks indicators with
 
 <br>
 
-    People with more cars seem to live in areas with less restaurants and more sports     facilities.
+    People with more cars seem to live in areas with less restaurants and more sports facilities.
 
 <br>
 
