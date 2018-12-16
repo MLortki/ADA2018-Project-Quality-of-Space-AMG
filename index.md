@@ -116,9 +116,12 @@ Finally, we used all of the features mentioned above to create 5 indicators. It 
 
 {% include radar_plot.html %}
 
+
 ## Population in Zurich
 
+{% include age_ridgeplot.html %}
 
+<br><br>
 Since it is hard to obtain big enough population sample of Zurich, we use the Swiss Mobiliar dataset for our data story to characterize people of Zurich. This approach, despite its bias,  was successfully used in approximation of population sample in previous researches, therefore we decided to adopt it.
 
 <br>

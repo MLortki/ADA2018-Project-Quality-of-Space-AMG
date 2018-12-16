@@ -52,7 +52,7 @@
 
       var label = document.createElement("LABEL")
       label.setAttribute("for", zip)
-      label.appendChild(document.createTextNode(zip + "  "))
+      label.appendChild(document.createTextNode(zip + '\u00A0'+ '\u00A0'+ '\u00A0'))
 
       document.getElementById("checkboxes").appendChild(x);
       document.getElementById("checkboxes").appendChild(label);
