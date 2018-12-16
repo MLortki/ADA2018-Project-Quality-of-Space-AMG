@@ -59,7 +59,7 @@
 
 <h2 id="quality-of-spacelife-in-zurich">Quality of Space/Life in Zurich</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>How should we divide/structure area of Zurich to study its characteristics? How can we define quality of life and space for identified areas?  What are the metrics we should use?
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>How should we divide/structure area of Zurich to study its characteristics? How can we define quality of life and space for identified areas?  What are the indicators we should use?
 </code></pre></div></div>
 
 <p><br /></p>
@@ -350,8 +350,32 @@ The datasets that we did not group with other datasets include (# of facilities 
   </script>
 </body>
 
+<p><br /></p>
+
+<h3 id="safety-score">Safety Score</h3>
+<p>We estimated safety indicator/score using street light counts in combination with number and shortest average distance of police locations using PCA. The best result was obtained weighting street lights and number of police locations by 0.87 and 0.1 respectively (positive influence), whereas distance was weighted by -0.49 (negative influence). The further the shortest average location is, the less the score will be. Obtained results make perfect logical sense.</p>
+
+<p><br /></p>
+
+<p>The visualization above displays score for each zip code. One can select any subset of postal areas for further exploration. We observe, that 8001 zip code has significantly better score (0.71)  than any other area. Since it is the old town part of Zurich, it seems logical that safety is emphasized. However, this score can be seen as an outlier considering that the maximal score for other postal areas is 0.3.</p>
+
+<h3 id="hospitality-score">Hospitality Score</h3>
+
+<p>In order to computer hospitality indicator, we used number and shortest average distance to hospitality facilities of our data. As expected, the final score is negatively influenced by distance (-0.29) and positively (0.96) by number of facilities. Again, 8001 postal area represents an outlier, that can be explained by its touristic value or biased sampling, since hospitality facilities in that area might be better known.</p>
+
+<h3 id="accessibility-score">Accessibility score</h3>
+
+<p>Regarding accessibility score, we utilized aggregated handicap dataset together with shortest average distance to it. In this case, score gets penalized harder than in previous cases, when distance is long (-0.76). This is a desired property, since number of facilities make no difference, if it’s cumbersome to reach one.</p>
+
+<h3 id="parks">Parks</h3>
+
+<p>To estimate parks/green are score, we used aggregated parks dataset with shortest average distances. In this case, distance has relatively small influence (-0.07), whereas number of parks is weighted by 0.1.</p>
+
+<h3 id="sports-facilities">Sports Facilities</h3>
+
+<p>In order to obtain the score, we normalize sport facilities dataset we have.</p>
+
 <p><br />
-<br />
 <br /></p>
 
 <h2 id="population-in-zurich">Population in Zurich</h2>
@@ -559,7 +583,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 <h2 id="linking-the-people-to-the-city">Linking the people to the city</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>investigate indicators and people in one frame, connect groups of people with areas   they occupy and search for reasons why.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Investigate indicators and people in one frame, connect groups of people with areas they occupy and search for reasons why.
 </code></pre></div></div>
 
 <p><br /></p>
@@ -596,7 +620,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 <p><br /></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>People with more children tend to live further away from hospitality companies and    closer to parks.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>People with more children tend to live further away from hospitality companies and closer to parks.
 </code></pre></div></div>
 
 <p><br /></p>
@@ -607,7 +631,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 <p><br /></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>People with more cars seem to live in areas with less restaurants and more sports     facilities.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>People with more cars seem to live in areas with less restaurants and more sports facilities.
 </code></pre></div></div>
 
 <p><br /></p>
