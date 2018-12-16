@@ -165,7 +165,7 @@ There are around **1M** entries in the Swiss Mobiliar dataset, however when narr
 
 
 -  Categorical data exploration <br>
-For the categorical data we have about the insurers, we aggregated the information into the percentage of
+For the categorical data (eg. job state, civil state, nationality) we have about the insurers, we aggregated the information into the percentage of each cateogry within an area. The following is a heatmap visualization of the data.
 
 {% include heatmap.html %}
 
