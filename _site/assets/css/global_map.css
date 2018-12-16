@@ -55,6 +55,7 @@ h2 {
 
 #plotHeader {
   background: none;
+  padding-top: 26px;
 }
 
 h3 {
@@ -118,14 +119,6 @@ header {
   color: white;
 }
 
-#ada-logo {
-  width: 40%;
-  margin-left: 15%
-}
-
-#epfl-logo {
-  width: 40%;
-}
 
 i {
   font-size: 50%;
@@ -322,7 +315,6 @@ circle {
 .centered {
   display: table;
   margin: 0 auto;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 4px;
 }
 
@@ -352,7 +344,6 @@ circle {
 #details-chart-container {
   margin-top: 10px;
   margin-bottom: 28px;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: left;
   padding: 30px;
   border-radius: 4px;
@@ -399,16 +390,7 @@ circle {
   text-align: justify;
 }
 
-.image12 {
-  text-align: center;
-  margin: 10px;
-  float: right;
-  max-width: 40%;
-  padding: 10px;
-  border-radius: 4px;
-  margin-left: 25px;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-}
+
 
 .imgContainer>img {
   border-radius: 3px;
@@ -441,12 +423,6 @@ circle {
   padding: 100px;
 }
 
-.profile-image {
-  border-radius: 50%;
-  max-width: 50%;
-  margin: 30px;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
 .socialmedia {
   margin-right: 12px;
@@ -464,7 +440,6 @@ circle {
 #map-svg {
   display: block;
   border-radius: 4px;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #f2f2f2;
 }
 
