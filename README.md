@@ -104,6 +104,8 @@ Population per zip code - this will be reduced to only Zurich zip codes
 # Contributions of Group Members
 
 Gregory Duthe: Open Data Zurich analysis (csv, json), indicator creation, correlation between datasets, data story textual/graphical descriptions
+
 Manana Lortkipanidze: Open Data Zurich analysis (shape files), visualizations for data story and exploration of public datasets, data story textual descriptions and indicator analysis
+
 Boying Liu: Insurance data exploration, Clustering of Insurers, visualizations for data story
 
