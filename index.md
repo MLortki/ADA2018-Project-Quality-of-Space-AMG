@@ -132,48 +132,35 @@ Since it is hard to obtain big enough population sample of Zurich, we use the Sw
 
 <br>
 
-The Swiss Mobiliar dataset is a private collection of anonymous insurance data, that groups information about clients, their demographics and properties. It contains the following relevant data:  (we need to choose which ones to keep from list)
-
-- anonymous ID
-- status of employment
-- civil status
-- gender
-- year of birth
-- if house is owned or rented
-- communication language
-- nation of origin
-- zip code of residence
-- how many children
-- canton of car matriculation
-- brand of car
-- price of car
-- car cylinder capacity
-- number of car claims
-- monetary value of car claims
-- premium class status of car
-- zip code of house
-- insured sum of house
-- standard of furniture
-- number of rooms in house
-- building zip code
-- insured sum of building
-- year of construction
-- type of house
-- number of claims for house
-- money of claims
-- premium class status of house
-
+The Swiss Mobiliar dataset is a private collection of anonymous insurance data, that groups information about clients, their demographics and properties. Among all the data, we decided to focus on some that are relavant to our study: status of employment, civil status, gender, year of birth, if house is owned or rented, communication language, nation of origin, zip code of residence, how many children, price of car, insured sum of house, standard of furniture, number of rooms in house.
 <br><br>
 
 There are around **1M** entries in the Swiss Mobiliar dataset, however when narrowing down to the zip codes of Zurich, the number of entries is reduced to around 50 000.
 
 <br><br>
 
-
+After data cleaning, we aggregated the data according to the zip code area the insurers live in. For categorical data, we looked at for each zip code area and Zurich at large, the percentage of resident falling in each category. For numerical data, we found the average (eg average age, average number of children).
+<br><br>
 -  Categorical data exploration <br>
 For the categorical data (eg. job state, civil state, nationality) we have about the insurers, we aggregated the information into the percentage of each cateogry within an area. The following is a heatmap visualization of the data.
 
 {% include heatmap.html %}
+<br><br>
+
+From the plot, we can see that most of the population are employed. In each of the area, there are at least 50% of the residents being employed. Residents living in zip code 8003, 8005, 8055 have the highest employment rate, reaching about 75%. There is also about 10% retired residents in each area. 
+<br><br>
+
+For civil status, we observe that most of the population are single (more than 40% in each area) and there are about 20% in each area that are married. We also observed that the areas that have a high employment rate also have a high single rate.
+<br><br>
+
+When it comes to gender, each area has also a 50/50 split which follows the natural population distribution.
+<br><br>
+The data suggests that most of the population in Zurich are renters, which might be related to the high property cost of Zurich. The zip code area 8053 has both a high percentage of retired residents and property owners, which seems to fit the intuition that people tend to have their own property later in live.
+<br><br>
+For each of the area, German is the dominating language and Swiss is the dominating nationality. However, we can observe that some areas like 8048, 8050, 8051, 8052 have a proportion - about 30% immigration.
+
+<br><br><br>
+
 
 <br>
 <br>
