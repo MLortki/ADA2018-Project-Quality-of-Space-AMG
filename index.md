@@ -206,8 +206,7 @@ We then focus on a few highly correlated elements, while being aware of the abov
 
 <br>
 
-
-This correlation was found with r= -0.804502 and p-value= 4e-7.
+Average age correlates with hospitality indicator with r= -0.80 and p-value= 4e-7.
 <br>
 <br>
 ![image-title-here](/assets/images/age_hospitality.png){:.map-image}
@@ -216,13 +215,17 @@ This correlation was found with r= -0.804502 and p-value= 4e-7.
 
 <br>
 
-    People with more children tend to live further away from hospitality companies and    closer to parks.
+    People with more children tend to live further away from hospitality companies and closer to parks.
+
 
 <br>
 
-This correlation was found with r=-0.746151 0.566424, p-value=4e-5 5e-3
-
-2 maps side by side.
+Average number of children correlates with hospitality and parks indicators with r= -0.75, p-value= 4e-5 and r= 0.57, p-value=5e-3 respectively.
+<br>
+<br>
+![image-title-here](/assets/images/child_parks.png){:.map-image}
+<br>
+<br>
 
 
 <br>
@@ -231,8 +234,12 @@ This correlation was found with r=-0.746151 0.566424, p-value=4e-5 5e-3
 
 <br>
 
-r=-0.660992 0.552678, p-value= 5e-4 6e-3
-2 maps side by side.
+Average number of cars correlates with hospitality and sports indicators with r= -0.66, p-value= 5e-4 and r= 0.55, p-value= 6e-3 respectively.
+<br>
+<br>
+![image-title-here](/assets/images/cars_sports.png){:.map-image}
+<br>
+<br>
 
 <br>
 
