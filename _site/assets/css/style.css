@@ -593,7 +593,7 @@ Small Device Styles
 #header_wrap {
   background-image: url("../images/zurich_pano.jpg");
   background-size: 100%;
-  background-position: 0px 510px; }
+  background-position: center; }
 
 .inner {
   position: relative;

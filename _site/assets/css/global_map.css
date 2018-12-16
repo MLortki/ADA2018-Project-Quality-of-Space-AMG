@@ -270,8 +270,8 @@ circle{
 
 #color-legend{
     position:absolute;
-    bottom: 12%;
-    right: 78%;
+    bottom: 35%;
+    right: 74%;
     left: 12%;
 }
 
@@ -460,7 +460,7 @@ circle{
 #map-container{
     margin-top:20px;
     width: 117%;
-    height:600px;
+    height:460px;
     margin: 0 auto;
 }
 

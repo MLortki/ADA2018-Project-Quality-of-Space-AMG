@@ -1,4 +1,4 @@
-,addresses,hospitality_companies,population,police_locations,parks,sport_facilities,child_facilities,elderly_facilities,toilets,handicapp,transport_rental,community_facilities,fountains,street_art,social_centers,street_lights,churches
+zip,addresses,hospitality_companies,population,police_locations,parks,sport_facilities,child_facilities,elderly_facilities,toilets,handicapp,transport_rental,community_facilities,fountains,street_art,social_centers,street_lights,churches
 8050,4134,153.0,34412,2.0,17.0,7.0,59.0,3.0,6.0,41.0,24.0,3.0,65.0,15.0,1.0,2677,2.0
 8049,3498,34.0,27853,1.0,14.0,2.0,35.0,3.0,4.0,15.0,10.0,1.0,62.0,6.0,0.0,2187,2.0
 8048,3492,95.0,33499,1.0,7.0,11.0,46.0,4.0,3.0,35.0,16.0,2.0,65.0,10.0,0.0,2225,4.0
@@ -23,4 +23,3 @@
 8002,1638,79.0,13212,2.0,9.0,2.0,21.0,0.0,4.0,20.0,12.0,0.0,54.0,54.0,0.0,1491,2.0
 8041,1158,8.0,7660,0.0,13.0,4.0,15.0,2.0,0.0,6.0,3.0,1.0,35.0,3.0,0.0,643,2.0
 8064,433,10.0,4248,0.0,1.0,3.0,5.0,3.0,1.0,2.0,3.0,1.0,15.0,8.0,0.0,641,1.0
-8143,18,2.0,4173,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0,0.0,0.0,42,0.0
