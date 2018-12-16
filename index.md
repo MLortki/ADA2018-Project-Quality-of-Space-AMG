@@ -107,7 +107,7 @@ Even though it is useful to know number of facilities per area, sometimes it’s
 
 <br>
 
-Finally, we used all of the features mentioned above to create 5 indicators. It is difficult to estimate how to combine the above metrics into a meaningful composite score, unless one is an expert. To avoid this difficulty, we used a method based on PCA  and inspired by the one used to create [socio-economic status indices](https://academic.oup.com/heapol/article/21/6/459/612115). In this method, relevant subsets of features are chosen. The data is then normalized for each feature and PCA is applied to it. The first component of the analysis is chosen to create the indicator, which is therefore basically a weighted sum of the normalized features.
+Finally, we used all of the features mentioned above to create 5 indicators. It is difficult to estimate how to combine the above metrics into a meaningful composite score, unless one is an expert. To avoid this difficulty, we used a method based on PCA  and inspired by the one used to create [socio-economic status indices](https://academic.oup.com/heapol/article/21/6/459/612115). In this method, relevant subsets of features are chosen. The data is then normalized for each feature, the mean is subtracted and finally PCA is applied. The first component of the analysis is chosen to create the indicator, which is therefore basically a weighted sum of the normalized features. The variance explained by the first component, was always above 75% for each of the create indicators, which justifies using only one component.
 
 <br>
 
@@ -122,16 +122,16 @@ Finally, we used all of the features mentioned above to create 5 indicators. It 
 
 
 ### Safety Score
-We estimated safety indicator/score using street light counts in combination with number and shortest average distance of police locations using PCA. The best result was obtained weighting street lights and number of police locations by 0.87 and 0.1 respectively (positive influence), whereas distance was weighted by -0.49 (negative influence). The further the shortest average location is, the less the score will be. Obtained results make perfect logical sense.
+We estimated safety indicator/score using street light counts in combination with number and shortest average distance of police locations using PCA. The best result was obtained weighting street lights and number of police locations by 0.87 and 0.1 respectively (positive influence), whereas distance was weighted by -0.49 (negative influence). The further the shortest average distance is, the smaller the score will be.
 
 <br>
 
-The visualization above displays score for each zip code. One can select any subset of postal areas for further exploration. We observe, that 8001 zip code has significantly better score (0.71)  than any other area. Since it is the old town part of Zurich, it seems logical that safety is emphasized. However, this score can be seen as an outlier considering that the maximal score for other postal areas is 0.3.
+The visualization above displays score for each zip code. One can select any subset of postal areas for further exploration. We observe, that 8001 zip code has significantly better score (0.71)  than any other area. Since it is the old town part of Zurich, it seems logical that safety is emphasized and there are more historical police locations. However, this score can be seen as an outlier considering that the maximal score for other postal areas is 0.3.
 
 
 ### Hospitality Score
 
-In order to computer hospitality indicator, we used number and shortest average distance to hospitality facilities of our data. As expected, the final score is negatively influenced by distance (-0.29) and positively (0.96) by number of facilities. Again, 8001 postal area represents an outlier, that can be explained by its touristic value or biased sampling, since hospitality facilities in that area might be better known.
+In order to computer hospitality indicator, we used number and shortest average distance to hospitality facilities of our data. As expected, the final score is negatively influenced by distance (-0.29) and positively (0.96) by number of facilities. Again, 8001 postal area is an outlier, that can be explained by its touristic value or biased sampling, since hospitality facilities in that area might be better known.
 
 ### Accessibility score
 
@@ -143,7 +143,7 @@ To estimate parks/green are score, we used aggregated parks dataset with shortes
 
 ### Sports Facilities
 
-In order to obtain the score, we normalize sport facilities dataset we have.
+In order to obtain the score, we normalize the number of sport facilities dataset by the total number in Zurich. Mean is also removed.
 
 <br>
 <br>
@@ -266,6 +266,20 @@ Moran's I is a measure of how spatially autocorrelated a variable is, and can be
 
 Surprinsingly, instead of seeing a difference between inner and outer Zurich postal areas, we instead observe a contrast between the eastern and the western postal areas.<br>
 
-
+<br>
 ## Conclusion
     What can we learn from this structure for knowledge transfer? What can we potentially improve for better life in Zurich?
+
+
+As seen on the indicator radar plot, some Zurich postal areas could improve their accessibility. It seems like many of the facilities equipped for the disabled are located in the historical area of Zurich, other areas could be improved. Some disparity in wealth distribution was observed. Relatively wealthy and poor areas were identified, which could be helpful for future city planning. For instance, measures pertaining to employment creation could be favorized in the less wealthy areas. The number of young adults is also associated with an increase in the number of bars, cafés etc. Interestingly, these hospitality companies seem to correlate with a decrease in the number of families. This is also important knowledge for city planners, since for instance an imbalance could contribute to wealth clustering. 
+
+<br>
+
+
+
+    What could we do to improve this study?
+
+Concerning spatial characterization, some indicators do not seem to behave as desired. Incorporating into their construction more data concerning factors such as unemployment, crime rate, etc, would be desirable. Additional indices measuring quality of life/space could also be constructed. With regards to population, a bigger, more representative sample could also improve this study.
+  
+
+
