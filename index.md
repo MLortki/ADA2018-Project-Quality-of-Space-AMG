@@ -77,7 +77,7 @@ The datasets that we did not group with other datasets include (# of facilities 
 
 <br>
 
-We also obtained the population per zip code, using la Poste’s [open database](https://swisspost.opendatasoft.com/explore/dataset/bevoelkerung_proplz/information/?disjunctive.plz&disjunctive.typ&disjunctive.ortbez18&sort=stichdatum).
+We also obtained the population per zip code, using la Poste’s [open database](https://swisspost.opendatasoft.com/explore/dataset/bevoelkerung_proplz/information/?disjunctive.plz&disjunctive.typ&disjunctive.ortbez18&sort=stichdatum). This was used to normalize values and get per person metrics, which are better suited for cross-comparison between zips.
 
 <br>
 
