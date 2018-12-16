@@ -32,6 +32,9 @@ Regarding the structure logical solution is to consider official postal areas wi
 
 To identify indicators we utilized the city of Zurich [open database](https://data.stadt-zuerich.ch/dataset), an online repository containing variety of information ranging from surveys to garbage collection schedules in Zurich.
 
+
+![image-title-here](/assets/images/openDataPipeline.png){:class="img-responsive"}
+
 <br>
 
 We selected 35 relevant datasets from all the existing datasets that provided information either on zip code level or on geographic coordinate level that we linked with postal areas. We logically grouped some of the datasets (# of facilities per zip code):
@@ -47,7 +50,7 @@ We selected 35 relevant datasets from all the existing datasets that provided in
 - Toilets: sum of public handicapped and non-handicapped equipped toilets
 - Transport rental: sum of all points of rental of Mobility cars and of PubliBikes.
 
-<br>
+<!-- <br>
 
 The datasets that we did not group with other datasets include (# of facilities per zip code):
 
@@ -58,11 +61,35 @@ The datasets that we did not group with other datasets include (# of facilities 
 - Street lights
 - Adresses/Buildings
 - Hospitality companies
+- Police locations -->
+
+<!-- - Population
+- addresses
+- sports Facilities
+- fountains
+- Street lights
 - Police locations
+- parks
+- hospitality companies
+- Handicapped -->
+
+
 
 <br>
 
 We also obtained the population per zip code, using la Poste’s [open database](https://swisspost.opendatasoft.com/explore/dataset/bevoelkerung_proplz/information/?disjunctive.plz&disjunctive.typ&disjunctive.ortbez18&sort=stichdatum).
+
+<br>
+
+Information regarding the most relevant (groups of) datasets is provided below:
+
+<br>
+<br>
+
+{% include scripts.html %}
+
+
+{% include global_map.html %}
 
 <br>
 
@@ -82,10 +109,7 @@ Finally, we used all of the features mentioned above to create 5 indicators. It 
 
 <br>
 
-{% include scripts.html %}
 
-
-{% include global_map.html %}
 
 <br>
 ## Zurich indicators
