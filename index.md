@@ -17,7 +17,9 @@ Zurich counts 400,028 inhabitants in total with around 32% of them not being Swi
 
 Since Zurich is so diverse in terms of population (ages, backgrounds, nationalities, wealth etc.) and space, some of you may wonder how it is structured. What can we learn from this structure for knowledge transfer or what can we potentially improve for better life in Zurich? To answer these questions we need to identify characteristics and indicators of quality of life and space, study their spatial distribution and connection between indicators. We also need to portray people, their preferences, their life styles. We need to group them and study their groups. Only then, can we investigate indicators and people in one frame, connect groups of people with areas they occupy and search for reasons why. This data story is a bridge between the quality of space and the people who live in the area. This data story, is the story of Zurich. Its people. Its spaces. Its life.
 
-
+<br>
+<br>
+<br>
 
 ## Quality of Space/Life in Zurich
 
@@ -116,13 +118,13 @@ Finally, we used all of the features mentioned above to create 5 indicators. It 
 
 {% include radar_plot.html %}
 
+<br>
+<br>
+<br>
 
 ## Population in Zurich
 
 <!-- {% include age_ridgeplot.html %} -->
-
-
-<br><br>
 
     Portray people, their preferences, their life styles in Zurich. Group them and study  their groups.
 
@@ -173,17 +175,15 @@ For the categorical data (eg. job state, civil state, nationality) we have about
 
 {% include heatmap.html %}
 
-- Clustering <br>
-
-	- Choose optimal k for clustering <br>
-
-
-	- Clustering insurance data <br>
-
-
-	- Explore each cluster <br>
+<br>
+<br>
+<br>
 
 ## Linking the people to the city
+
+    investigate indicators and people in one frame, connect groups of people with areas   they occupy and search for reasons why.
+
+<br>
 
 Now that we have constructed metrics that characterize the city and obtained information about its citizens, we want to link the people to the area that they live in, and understand what are the factors that lead to them living there. We have gathered a lot of features and metrics so far, and there is a lot of information to be extracted. We chose to focalize our spatial analysis to a few points that really stand out. To reveal these elements, we first examine which features correlate to each other. The following heatmap shows the Pearson correlation coefficient between all of the indicators and some mean insurance data features (aggregated to zip code level). The 8001 postal area is an outlier. Being the historical center, it is very well equipped and dense in terms of buildings, hospitality companies etc. It will be removed in this analysis.<br>
 <br>
@@ -191,6 +191,9 @@ Now that we have constructed metrics that characterize the city and obtained inf
 <br>
 
 Some remarks concerning this heatmap:
+
+<br>
+
 - All of the mean insurance customer metrics seem to be positively correlated together. This should be expected, as older customers should earn more, have more cars and larger houses on average.<br>
 - Some of the city indicators are positively correlated together. For instance the safety indicator seems to be quite strongly positvely correlated to the hospitality one.<br>
 - We see some counterintuitive behavior: the average number of rooms is strongly negatively correlated to the safety indicator. Upon further analysis, and when considering how the safety indicator was constructed, it seems that this safety score is actually measuring proximity to the center. The majority of the police locations are situated in the center of Zurich, and the number of street lights follows a similar pattern. This does not however mean that the suburban postal areas are less safe.<br>
@@ -199,8 +202,11 @@ Some remarks concerning this heatmap:
 We then focus on a few highly correlated elements, while being aware of the above remarks.<br>
 <br>
 
-**Young people tend to be in areas with more hospitality companies (bars, cafés, etc.).**<br>
+    Young people tend to be in areas with more hospitality companies (bars, cafés, etc.).
+
 <br>
+
+
 This correlation was found with r= -0.804502 and p-value= 4e-7.
 <br>
 <br>
@@ -208,17 +214,33 @@ This correlation was found with r= -0.804502 and p-value= 4e-7.
 <br>
 <br>
 
-**People with more children tend to live further aways from hospitality companies and closer to parks.**<br>
-(r=-0.746151 0.566424, p-value=4e-5 5e-3)
-
-2 maps side by side.
-
-**People with more cars seem to live in areas with less restaurants and more sports facilities**<br>
-(r=-0.660992 0.552678, p-value= 5e-4 6e-3)
-2 maps side by side.
-
-In general it seems that the wealthier you are, which in general means that you are older and have more cars and a bigger house, the more you live on the outskirts of Zurich, in areas with less cafés, restaurants etc. To mathematically back up this claim we choose to look at the spatial autocorrelation of wealthy people, i.e. we ask the following the question: is there a pattern to the spatial distribution of the wealthy? We can answer performing a spatial analysis using **Moran's I**.<br>
 <br>
+
+    People with more children tend to live further away from hospitality companies and    closer to parks.
+
+<br>
+
+This correlation was found with r=-0.746151 0.566424, p-value=4e-5 5e-3
+
+2 maps side by side.
+
+
+<br>
+
+    People with more cars seem to live in areas with less restaurants and more sports     facilities.
+
+<br>
+
+r=-0.660992 0.552678, p-value= 5e-4 6e-3
+2 maps side by side.
+
+<br>
+
+In general it seems that the wealthier you are, which in general means that you are older and have more cars and a bigger house, the more you live on the outskirts of Zurich, in areas with less cafés, restaurants etc. To mathematically back up this claim we choose to look at the spatial autocorrelation of wealthy people, i.e. we ask the following the question: is there a pattern to the spatial distribution of the wealthy? We can answer performing a spatial analysis using **Moran's I**.
+
+<br>
+<br>
+
 Moran's I is a measure of how spatially autocorrelated a variable is, and can be easily [implemented](http://darribas.org/gds15/content/labs/lab_06.html) using the PySAL package. For the average property premium of insurance customers in Zurich, we find a Moran's I of **0.46**, with a p-value of **0.001**. This indicates that there is indeed a pattern to distribution of the wealthy. What then is that pattern? Using PySAL's Local Indicators of Spatial Association (LISAs), we can determine spatial clusters. This is shown in the map below.<br>
 
 <br>
@@ -227,61 +249,6 @@ Moran's I is a measure of how spatially autocorrelated a variable is, and can be
 
 Surprinsingly, instead of seeing a difference between inner and outer Zurich postal areas, we instead observe a contrast between the eastern and the western postal areas.<br>
 
-## Clusters
 
-* * *
-
-### Here is an unordered list:
-
--   Item foo
--   Item bar
--   Item baz
--   Item zip
-
-### And an ordered list:
-
-1.  Item one
-2.  Item two
-3.  Item three
-4.  Item four
-
-### And a nested list:
-
--   level 1 item
-    -   level 2 item
-    -   level 2 item
-        -   level 3 item
-        -   level 3 item
--   level 1 item
-    -   level 2 item
-    -   level 2 item
-    -   level 2 item
--   level 1 item
-    -   level 2 item
-    -   level 2 item
--   level 1 item
-
-### Small image
-
-![Octocat](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-    Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-
-    The final element.
+## Conclusion
+    What can we learn from this structure for knowledge transfer? What can we potentially improve for better life in Zurich?

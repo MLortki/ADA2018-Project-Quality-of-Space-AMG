@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Quality of Space in Zurich" />
 <script type="application/ld+json">
-{"name":"Quality of Space in Zurich","description":"A snapshot into Switzerland’s economic heart, through the lens of data.","@type":"WebSite","url":"http://localhost:4000/","headline":"Quality of Space in Zurich","@context":"http://schema.org"}</script>
+{"@type":"WebSite","headline":"Quality of Space in Zurich","url":"http://localhost:4000/","name":"Quality of Space in Zurich","description":"A snapshot into Switzerland’s economic heart, through the lens of data.","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -52,6 +52,10 @@
 <p><br /></p>
 
 <p>Since Zurich is so diverse in terms of population (ages, backgrounds, nationalities, wealth etc.) and space, some of you may wonder how it is structured. What can we learn from this structure for knowledge transfer or what can we potentially improve for better life in Zurich? To answer these questions we need to identify characteristics and indicators of quality of life and space, study their spatial distribution and connection between indicators. We also need to portray people, their preferences, their life styles. We need to group them and study their groups. Only then, can we investigate indicators and people in one frame, connect groups of people with areas they occupy and search for reasons why. This data story is a bridge between the quality of space and the people who live in the area. This data story, is the story of Zurich. Its people. Its spaces. Its life.</p>
+
+<p><br />
+<br />
+<br /></p>
 
 <h2 id="quality-of-spacelife-in-zurich">Quality of Space/Life in Zurich</h2>
 
@@ -346,6 +350,10 @@ The datasets that we did not group with other datasets include (# of facilities 
   </script>
 </body>
 
+<p><br />
+<br />
+<br /></p>
+
 <h2 id="population-in-zurich">Population in Zurich</h2>
 
 <!-- <html lang="en">
@@ -407,8 +415,6 @@ The datasets that we did not group with other datasets include (# of facilities 
     </body>
 </html>
  -->
-
-<p><br /><br /></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Portray people, their preferences, their life styles in Zurich. Group them and study  their groups.
 </code></pre></div></div>
@@ -547,25 +553,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 </script>
 
-<ul>
-  <li>
-    <p>Clustering <br /></p>
-
-    <ul>
-      <li>
-        <p>Choose optimal k for clustering <br /></p>
-      </li>
-      <li>
-        <p>Clustering insurance data <br /></p>
-      </li>
-      <li>
-        <p>Explore each cluster <br /></p>
-      </li>
-    </ul>
-  </li>
-</ul>
+<p><br />
+<br />
+<br /></p>
 
 <h2 id="linking-the-people-to-the-city">Linking the people to the city</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>investigate indicators and people in one frame, connect groups of people with areas   they occupy and search for reasons why.
+</code></pre></div></div>
+
+<p><br /></p>
 
 <p>Now that we have constructed metrics that characterize the city and obtained information about its citizens, we want to link the people to the area that they live in, and understand what are the factors that lead to them living there. We have gathered a lot of features and metrics so far, and there is a lot of information to be extracted. We chose to focalize our spatial analysis to a few points that really stand out. To reveal these elements, we first examine which features correlate to each other. The following heatmap shows the Pearson correlation coefficient between all of the indicators and some mean insurance data features (aggregated to zip code level). The 8001 postal area is an outlier. Being the historical center, it is very well equipped and dense in terms of buildings, hospitality companies etc. It will be removed in this analysis.<br />
 <br />
@@ -573,6 +570,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <br /></p>
 
 <p>Some remarks concerning this heatmap:</p>
+
+<p><br /></p>
+
 <ul>
   <li>All of the mean insurance customer metrics seem to be positively correlated together. This should be expected, as older customers should earn more, have more cars and larger houses on average.<br /></li>
   <li>Some of the city indicators are positively correlated together. For instance the safety indicator seems to be quite strongly positvely correlated to the hospitality one.<br /></li>
@@ -582,27 +582,47 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <p>We then focus on a few highly correlated elements, while being aware of the above remarks.<br />
 <br /></p>
 
-<p><strong>Young people tend to be in areas with more hospitality companies (bars, cafés, etc.).</strong><br />
-<br />
-This correlation was found with r= -0.804502 and p-value= 4e-7.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Young people tend to be in areas with more hospitality companies (bars, cafés, etc.).
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>This correlation was found with r= -0.804502 and p-value= 4e-7.
 <br />
 <br />
 <img src="/assets/images/age_hospitality.png" alt="image-title-here" class="map-image" />
 <br />
 <br /></p>
 
-<p><strong>People with more children tend to live further aways from hospitality companies and closer to parks.</strong><br />
-(r=-0.746151 0.566424, p-value=4e-5 5e-3)</p>
+<p><br /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>People with more children tend to live further away from hospitality companies and    closer to parks.
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>This correlation was found with r=-0.746151 0.566424, p-value=4e-5 5e-3</p>
 
 <p>2 maps side by side.</p>
 
-<p><strong>People with more cars seem to live in areas with less restaurants and more sports facilities</strong><br />
-(r=-0.660992 0.552678, p-value= 5e-4 6e-3)
+<p><br /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>People with more cars seem to live in areas with less restaurants and more sports     facilities.
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>r=-0.660992 0.552678, p-value= 5e-4 6e-3
 2 maps side by side.</p>
 
-<p>In general it seems that the wealthier you are, which in general means that you are older and have more cars and a bigger house, the more you live on the outskirts of Zurich, in areas with less cafés, restaurants etc. To mathematically back up this claim we choose to look at the spatial autocorrelation of wealthy people, i.e. we ask the following the question: is there a pattern to the spatial distribution of the wealthy? We can answer performing a spatial analysis using <strong>Moran’s I</strong>.<br />
-<br />
-Moran’s I is a measure of how spatially autocorrelated a variable is, and can be easily <a href="http://darribas.org/gds15/content/labs/lab_06.html">implemented</a> using the PySAL package. For the average property premium of insurance customers in Zurich, we find a Moran’s I of <strong>0.46</strong>, with a p-value of <strong>0.001</strong>. This indicates that there is indeed a pattern to distribution of the wealthy. What then is that pattern? Using PySAL’s Local Indicators of Spatial Association (LISAs), we can determine spatial clusters. This is shown in the map below.<br /></p>
+<p><br /></p>
+
+<p>In general it seems that the wealthier you are, which in general means that you are older and have more cars and a bigger house, the more you live on the outskirts of Zurich, in areas with less cafés, restaurants etc. To mathematically back up this claim we choose to look at the spatial autocorrelation of wealthy people, i.e. we ask the following the question: is there a pattern to the spatial distribution of the wealthy? We can answer performing a spatial analysis using <strong>Moran’s I</strong>.</p>
+
+<p><br />
+<br /></p>
+
+<p>Moran’s I is a measure of how spatially autocorrelated a variable is, and can be easily <a href="http://darribas.org/gds15/content/labs/lab_06.html">implemented</a> using the PySAL package. For the average property premium of insurance customers in Zurich, we find a Moran’s I of <strong>0.46</strong>, with a p-value of <strong>0.001</strong>. This indicates that there is indeed a pattern to distribution of the wealthy. What then is that pattern? Using PySAL’s Local Indicators of Spatial Association (LISAs), we can determine spatial clusters. This is shown in the map below.<br /></p>
 
 <p><br />
 <img src="/assets/images/spatial_clusters.png" alt="image-title-here" class="center-image" />
@@ -610,82 +630,8 @@ Moran’s I is a measure of how spatially autocorrelated a variable is, and can 
 
 <p>Surprinsingly, instead of seeing a difference between inner and outer Zurich postal areas, we instead observe a contrast between the eastern and the western postal areas.<br /></p>
 
-<h2 id="clusters">Clusters</h2>
-
-<hr />
-
-<h3 id="here-is-an-unordered-list">Here is an unordered list:</h3>
-
-<ul>
-  <li>Item foo</li>
-  <li>Item bar</li>
-  <li>Item baz</li>
-  <li>Item zip</li>
-</ul>
-
-<h3 id="and-an-ordered-list">And an ordered list:</h3>
-
-<ol>
-  <li>Item one</li>
-  <li>Item two</li>
-  <li>Item three</li>
-  <li>Item four</li>
-</ol>
-
-<h3 id="and-a-nested-list">And a nested list:</h3>
-
-<ul>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item
-        <ul>
-          <li>level 3 item</li>
-          <li>level 3 item</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-    </ul>
-  </li>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-    </ul>
-  </li>
-  <li>level 1 item</li>
-</ul>
-
-<h3 id="small-image">Small image</h3>
-
-<p><img src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" alt="Octocat" /></p>
-
-<h3 id="large-image">Large image</h3>
-
-<p><img src="https://guides.github.com/activities/hello-world/branching.png" alt="Branching" /></p>
-
-<h3 id="definition-lists-can-be-used-with-html-syntax">Definition lists can be used with HTML syntax.</h3>
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-
-The final element.
+<h2 id="conclusion">Conclusion</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What can we learn from this structure for knowledge transfer? What can we potentially improve for better life in Zurich?
 </code></pre></div></div>
 
       </section>
