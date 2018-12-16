@@ -109,3 +109,7 @@ Manana Lortkipanidze: Open Data Zurich analysis (shape files), visualizations fo
 
 Boying Liu: Insurance data exploration, Clustering of Insurers, visualizations for data story
 
+
+# Final Presentation
+
+All three group members will be working on poster. However, only 2 (Manana Lortkipanidze and Gregory Duthe) will present it.
