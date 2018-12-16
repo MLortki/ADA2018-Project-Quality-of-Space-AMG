@@ -9,7 +9,7 @@ https://mlortki.github.io/ADA2018-Project-Quality-of-Space-AMG/
 
 Final jupyter notebook:
 
-data_analysis.ipynb
+Data_analysis.ipynb
 
 
 # Abstract
