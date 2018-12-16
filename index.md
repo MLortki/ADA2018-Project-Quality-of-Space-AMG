@@ -173,7 +173,7 @@ For the categorical data (eg. job state, civil state, nationality) we have about
 {% include heatmap.html %}
 <br><br>
 
-From the plot, we can see that most of the population are employed. In each of the area, there are at least 50% of the residents being employed. Residents living in zip code 8003, 8005, 8055 have the highest employment rate, reaching about 75%. There is also about 10% retired residents in each area. 
+From the plot, we can see that most of the population are employed. In each of the area, there are at least 50% of the residents being employed. Residents living in zip code 8003, 8005, 8055 have the highest employment rate, reaching about 75%. There is also about 10% retired residents in each area.
 <br><br>
 
 For civil status, we observe that most of the population are single (more than 40% in each area) and there are about 20% in each area that are married. We also observed that the areas that have a high employment rate also have a high single rate.
@@ -187,10 +187,6 @@ For each of the area, German is the dominating language and Swiss is the dominat
 
 <br><br><br>
 
-
-<br>
-<br>
-<br>
 
 ## Linking the people to the city
 

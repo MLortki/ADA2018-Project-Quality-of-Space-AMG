@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Quality of Space in Zurich" />
 <script type="application/ld+json">
-{"name":"Quality of Space in Zurich","description":"A snapshot into Switzerland’s economic heart, through the lens of data.","@type":"WebSite","url":"http://localhost:4000/","headline":"Quality of Space in Zurich","@context":"http://schema.org"}</script>
+{"@type":"WebSite","headline":"Quality of Space in Zurich","url":"http://localhost:4000/","name":"Quality of Space in Zurich","description":"A snapshot into Switzerland’s economic heart, through the lens of data.","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -236,7 +236,7 @@ The datasets that we did not group with other datasets include (# of facilities 
   <div id="checkboxes"></div>
   <p align="center">(Toggle the legend to display/hide radar plot of certain region)</p>
   <script>
-  theta = ['safety', 'hospitality',	'handicapp',	'parks', 'sports_facility']
+  theta = ['Safety', 'Hospitality','Accessibility','Parks', 'Sports facility']
   values = {
     "8050":	[0.030896828,	-0.004572564,	0.057085518,	-0.010871173,	0.026753241],
     "8049":	[-0.022621446,	-0.098502831,	-0.08832494,	-0.014034132,	-0.084931888],
@@ -447,45 +447,15 @@ The datasets that we did not group with other datasets include (# of facilities 
 
 <p><br /></p>
 
-<p>The Swiss Mobiliar dataset is a private collection of anonymous insurance data, that groups information about clients, their demographics and properties. It contains the following relevant data:  (we need to choose which ones to keep from list)</p>
-
-<ul>
-  <li>anonymous ID</li>
-  <li>status of employment</li>
-  <li>civil status</li>
-  <li>gender</li>
-  <li>year of birth</li>
-  <li>if house is owned or rented</li>
-  <li>communication language</li>
-  <li>nation of origin</li>
-  <li>zip code of residence</li>
-  <li>how many children</li>
-  <li>canton of car matriculation</li>
-  <li>brand of car</li>
-  <li>price of car</li>
-  <li>car cylinder capacity</li>
-  <li>number of car claims</li>
-  <li>monetary value of car claims</li>
-  <li>premium class status of car</li>
-  <li>zip code of house</li>
-  <li>insured sum of house</li>
-  <li>standard of furniture</li>
-  <li>number of rooms in house</li>
-  <li>building zip code</li>
-  <li>insured sum of building</li>
-  <li>year of construction</li>
-  <li>type of house</li>
-  <li>number of claims for house</li>
-  <li>money of claims</li>
-  <li>premium class status of house</li>
-</ul>
-
-<p><br /><br /></p>
+<p>The Swiss Mobiliar dataset is a private collection of anonymous insurance data, that groups information about clients, their demographics and properties. Among all the data, we decided to focus on some that are relavant to our study: status of employment, civil status, gender, year of birth, if house is owned or rented, communication language, nation of origin, zip code of residence, how many children, price of car, insured sum of house, standard of furniture, number of rooms in house.
+<br /><br /></p>
 
 <p>There are around <strong>1M</strong> entries in the Swiss Mobiliar dataset, however when narrowing down to the zip codes of Zurich, the number of entries is reduced to around 50 000.</p>
 
 <p><br /><br /></p>
 
+<p>After data cleaning, we aggregated the data according to the zip code area the insurers live in. For categorical data, we looked at for each zip code area and Zurich at large, the percentage of resident falling in each category. For numerical data, we found the average (eg average age, average number of children).
+<br /><br /></p>
 <ul>
   <li>Categorical data exploration <br />
 For the categorical data (eg. job state, civil state, nationality) we have about the insurers, we aggregated the information into the percentage of each cateogry within an area. The following is a heatmap visualization of the data.</li>
@@ -577,9 +547,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 </script>
 
-<p><br />
-<br />
-<br /></p>
+<p><br /><br /></p>
+
+<p>From the plot, we can see that most of the population are employed. In each of the area, there are at least 50% of the residents being employed. Residents living in zip code 8003, 8005, 8055 have the highest employment rate, reaching about 75%. There is also about 10% retired residents in each area.
+<br /><br /></p>
+
+<p>For civil status, we observe that most of the population are single (more than 40% in each area) and there are about 20% in each area that are married. We also observed that the areas that have a high employment rate also have a high single rate.
+<br /><br /></p>
+
+<p>When it comes to gender, each area has also a 50/50 split which follows the natural population distribution.
+<br /><br />
+The data suggests that most of the population in Zurich are renters, which might be related to the high property cost of Zurich. The zip code area 8053 has both a high percentage of retired residents and property owners, which seems to fit the intuition that people tend to have their own property later in live.
+<br /><br />
+For each of the area, German is the dominating language and Swiss is the dominating nationality. However, we can observe that some areas like 8048, 8050, 8051, 8052 have a proportion - about 30% immigration.</p>
+
+<p><br /><br /><br /></p>
 
 <h2 id="linking-the-people-to-the-city">Linking the people to the city</h2>
 
