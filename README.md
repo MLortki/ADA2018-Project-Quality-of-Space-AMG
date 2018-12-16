@@ -101,3 +101,9 @@ List of Datasets used (Zurich, zip code level info given as well), that will ser
 Finally, we have the following dataset taken from opendata.swiss (https://opendata.swiss/en/dataset/bevoelkerung-pro-plz):
 Population per zip code - this will be reduced to only Zurich zip codes
 
+# Contributions of Group Members
+
+Gregory Duthe: Open Data Zurich analysis (csv, json), indicator creation, correlation between datasets, data story textual/graphical descriptions
+Manana Lortkipanidze: Open Data Zurich analysis (shape files), visualizations for data story and exploration of public datasets, data story textual descriptions and indicator analysis
+Boying Liu: Insurance data exploration, Clustering of Insurers, visualizations for data story
+
