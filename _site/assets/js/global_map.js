@@ -75,7 +75,17 @@ class MapPlot {
       9: "handicapp"
     }
 
-
+    var description_text = {
+      1: "There are 400,028 inhabitants in Zurich in total. Number of Population per zip code ranges roughly from 4000 thousand to 34000. It has to be noted that bigger areas do not necessarily correspond to the higher numbers of population. However, one could say that north west postal areas are the most densely populated.",
+      2: "Dataset provides information about number of buildings/addressed for each zope code. The number varies from 433 to 4134. Larger postal areas correspond to the higher number of building, which makes logical sense. However, one can clearly see that most buildings/addressed are located in the north west postal areas 8048, 8046 and 8049.",
+      3: "Sports facilities are sum of all of the public sport amenities (pools, soccer pitches, volleyball fields, sports halls, etc.). However, numbers provided are very small since most of the existing sports facilities in Zurich are private. Therefore, this dataset can not serve as an indicator of sportiness of people in the area. However, since the north part of the Zurich makes the most populated district, it is logical that it has the most public sport facilities.",
+      4: "Number of fountains varies from 15 to 148 per zip code. Postal areas with the most fountains are located in the north of Zurich. North part is the most populous district of Zurich, so it is understandable that it would have the most fountains.",
+      5: "Number of streetlights varies from 641 to 2967 per zip code. One could observe a clear pattern, that higher number of buildings and larger populations correspond to the higher number of streetlights.",
+      6: "There are just a few police locations in Zurich. One could say that zip codes with the most number of inhabitants and building correspond to the higher number of police locations.",
+      7: "Aggregation of two datasets. Namely of public parks and picnic areas. Number of parks per zip code varies from 1 to 17. With 8049 and 8037 being the postal areas with the most parks. With 8049 zip code being area with one of the highest number of inhabitants.",
+      8: "Number of hospitality companies vary from 8 to 415. It is obvious that the dataset does not contain full information, however we assumed that it is a random sample, meaning we have different scale and that relative values of different zip codes give valid information. ",
+      9: "Number of handicapped Toilets/Parkings vary from 2 to 44. Only postal areas in the south east have just a few handicapped equipped facilities. Rest of the zip codes seem to be more handicap friendly."
+    }
 
 
 
@@ -210,6 +220,9 @@ class MapPlot {
             .domain(metricArray)
             .range(d3.schemeRdPu[quantiles]);
 
+          // console.log(description_text[metric_column]);
+          d3.select('#map_desc').text(description_text[metric_column]);
+
           d3.select("#color-legend").select("div").remove();
           color_legend("Color Map ", coloring);
           // console.log(map_column);
@@ -217,7 +230,6 @@ class MapPlot {
           d3.selectAll(".code").transition() //select all the countries and prepare for a transition to new values
             .duration(500) // give it a smooth time period for the transition
             .style('fill', function(d) {
-              console.log(map_column);
               return getColor(d.properties[map_column], coloring); // the end color value
             })
         }
@@ -283,10 +295,28 @@ class MapPlot {
             tooltip_map.style("left", (d3.mouse(this)[0]) + "px")
               .style("top", d3.event.pageY + "px");
 
+
+            var tooltip_text =   "<p>" + normalizedStr + space_metrics[metric_column] + ": " +
+              parseInt(d.properties[space_metric_csv[metric_column]]) + "</p>";
+
+
+            for(var i=1; i< Object.keys(space_metric_csv).length; i++) {
+              if (i != metric_column) {
+
+                normalizedStr = "";
+                if (i != 1) {
+                  normalizedStr = "Number of "
+                }
+
+
+                tooltip_text += "<p>" + normalizedStr + space_metrics[i] + ": " +
+                parseInt(d.properties[space_metric_csv[i]]) + "</p>";
+              }
+
+            }
             // create tooltip on the map
-            tooltip_map.html("<h4> Postal Code " + d.properties.ZIP + "</h4>" +
-              "<p>" + normalizedStr + space_metrics[metric_column] + ": " +
-              parseInt(d.properties[space_metric_csv[metric_column]]) + "</p>");
+            tooltip_map.html("<h4> Postal Code " + d.properties.ZIP + "</h4>" + tooltip_text);
+
             // "Population: " + parseInt(d.properties[desc]) +
 
           })
