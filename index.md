@@ -282,4 +282,6 @@ As seen on the indicator radar plot, some Zurich postal areas could improve thei
 Concerning spatial characterization, some indicators do not seem to behave as desired. Incorporating into their construction more data concerning factors such as unemployment, crime rate, etc, would be desirable. Additional indices measuring quality of life/space could also be constructed. With regards to population, a bigger, more representative sample could also improve this study.
   
 
-
+<br>
+### Acknowledgments 
+We would like to thank Prof. Binder and her lab, [the Laboratory for Human-Environment Relations in Urban Systems (HERUS)](https://herus.epfl.ch/), for supplying us with not only access to the dataset, but also with help and advice. In particular, a special thanks to Emanuele Massaro for setting up the access and for his guidance on a number of issues.
