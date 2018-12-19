@@ -285,3 +285,4 @@ Concerning spatial characterization, some indicators do not seem to behave as de
 <br>
 ### Acknowledgments 
 We would like to thank Prof. Binder and her lab, [the Laboratory for Human-Environment Relations in Urban Systems (HERUS)](https://herus.epfl.ch/), for supplying us with not only access to the dataset, but also with help and advice. In particular, a special thanks to Emanuele Massaro for setting up the access and for his guidance on a number of issues.
+
